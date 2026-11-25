@@ -3,7 +3,7 @@
 
 PY := uv run python -m pipeline
 
-.PHONY: help setup smoke check validate draft radio film status costs
+.PHONY: help setup smoke check validate draft radio film status costs calibrate
 
 help:
 	@echo "make setup     install dependencies and check that ffmpeg is present"
@@ -15,7 +15,10 @@ help:
 	@echo "make costs     rebuild the tables in COSTS.md from runs.jsonl"
 	@echo "make draft     ask Gemini to draft storyboard.draft.json from story/brief.md"
 	@echo ""
+	@echo "make calibrate measure Wan 2.2 on Kaggle before queueing the film's shots"
+	@echo ""
 	@echo "Options:  ONLY=keyframes,narration   run only these stages"
+	@echo "          SKIP=shots                 leave a stage out, for example the long GPU stage"
 	@echo "          FORCE=keyframes:s04        regenerate one output even if cached"
 	@echo "          EXPERIMENT=E4              tag the model calls of this run"
 
@@ -42,7 +45,10 @@ radio:
 	$(PY) radio
 
 film:
-	$(PY) film $(if $(ONLY),--only $(ONLY)) $(if $(FORCE),--force $(FORCE))
+	$(PY) film $(if $(ONLY),--only $(ONLY)) $(if $(SKIP),--skip $(SKIP)) $(if $(FORCE),--force $(FORCE))
+
+calibrate:
+	EXPERIMENT=E7 $(PY) calibrate $(IMAGE)
 
 status:
 	$(PY) status

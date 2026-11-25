@@ -25,7 +25,11 @@ def main(argv: list[str] | None = None) -> int:
 
     p = sub.add_parser("film", help="run the whole pipeline")
     p.add_argument("--only", help="comma-separated stages, for example keyframes,narration")
+    p.add_argument("--skip", help="comma-separated stages to leave out, for example shots")
     p.add_argument("--force", help="regenerate one output, for example keyframes:s04")
+
+    p = sub.add_parser("calibrate", help="experiment E7: measure Wan 2.2 on Kaggle's T4s")
+    p.add_argument("image", nargs="?")
 
     args = parser.parse_args(argv)
 
@@ -52,7 +56,10 @@ def main(argv: list[str] | None = None) -> int:
         return costs.main()
     if args.command == "film":
         from . import film
-        return film.main(only=args.only, force=args.force)
+        return film.main(only=args.only, force=args.force, skip=args.skip)
+    if args.command == "calibrate":
+        from . import calibrate
+        return calibrate.main([args.image] if args.image else [])
     return 2
 
 

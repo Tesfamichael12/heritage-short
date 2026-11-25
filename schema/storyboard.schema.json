@@ -87,6 +87,7 @@
         "steps": { "type": "integer", "minimum": 1, "maximum": 50 },
         "guidance": { "type": "number", "minimum": 0, "maximum": 10 },
         "precision": { "enum": ["fp16", "fp32"], "default": "fp16" },
+        "negative_prompt": { "type": "string", "description": "What the video model should avoid. A sensible default is used when this is absent." },
         "batch_size": { "type": "integer", "minimum": 1, "maximum": 12, "default": 3, "description": "Shots per Kaggle job." },
         "time_budget_min": { "type": "integer", "minimum": 10, "maximum": 660, "default": 150 }
       }

@@ -26,7 +26,8 @@ from pathlib import Path
 
 from PIL import Image
 
-from .common import config, runlog
+from . import shots
+from .common import config
 from .providers import kaggle
 
 EXPERIMENT = "E7"
@@ -73,32 +74,6 @@ def build_job(image_path: Path, time_budget_min: int = 100) -> dict:
     }
 
 
-def log_tasks(outcome: dict) -> None:
-    """Copy each remote task into runs.jsonl as a model call."""
-    environment = outcome["results"].get("environment", {})
-    for task in outcome["results"].get("tasks", []):
-        runlog.write({
-            "event": "model_call",
-            "stage": "shots",
-            "shot": task.get("id"),
-            "provider": "kaggle",
-            "model": MODEL,
-            "params": {k: task.get(k) for k in ("width", "height", "num_frames", "steps", "guidance", "precision")},
-            "seed": task.get("seed"),
-            "prompt": task.get("prompt"),
-            "status": task.get("status"),
-            "error": task.get("error"),
-            "latency_s": task.get("seconds"),
-            "cost": {"unit": "gpu_seconds", "amount": task.get("seconds"),
-                     "gpu": (environment.get("gpus") or [None])[0]},
-            "seconds_per_step": task.get("seconds_per_step"),
-            "peak_vram_gb": task.get("peak_vram_gb"),
-            "frame_check": {k: task.get(k) for k in ("black", "frozen", "mean", "std", "first_last_diff")},
-            "output": task.get("output"),
-            "kaggle_ref": outcome["ref"],
-        })
-
-
 def report(outcome: dict) -> None:
     results = outcome["results"]
     print(f"\nKaggle job {outcome['ref']}: {outcome['status']} after {outcome['wall_s'] / 60:.1f} min")
@@ -127,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
     slug = f"heritage-wan-calibration-{time.strftime('%m%d-%H%M')}"
     dest = DEST / slug
     outcome = kaggle.run(slug, "wan_job.py", build_job(image), dest, timeout_s=3 * 3600)
-    log_tasks(outcome)
+    shots.log_job(outcome, MODEL)
     (dest / "outcome.json").write_text(json.dumps(outcome, indent=2), encoding="utf-8")
     report(outcome)
     print(f"\nFiles: {config.rel(dest)}")

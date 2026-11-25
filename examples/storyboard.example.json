@@ -46,7 +46,7 @@
     "time_budget_min": 150
   },
   "music": {
-    "model": "ACE-Step/Ace-Step1.5",
+    "model": "acestep-v15-turbo",
     "caption": "gentle instrumental underscore, solo krar and soft washint flute over a warm drone, sparse, intimate, no strong lead melody, nostalgic and hopeful",
     "bpm": 72,
     "keyscale": "D Minor",

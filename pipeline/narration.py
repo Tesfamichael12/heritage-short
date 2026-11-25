@@ -124,6 +124,17 @@ def _generate(board: dict[str, Any], shot: dict[str, Any], manifest: cache.Manif
     raise last
 
 
+def timeline_from_disk(board: dict[str, Any]) -> dict[str, Any]:
+    """The timeline from the narration files that already exist. Generates nothing."""
+    spoken = [shot for shot in board["shots"] if shot["narration"]["text"].strip()]
+    measured = {shot["id"]: wav_seconds(line_path(shot["id"])) for shot in spoken if line_path(shot["id"]).exists()}
+    timeline = build_timeline(board, measured)
+    timeline["missing_narration"] = [shot["id"] for shot in spoken if shot["id"] not in measured]
+    config.TIMELINE.parent.mkdir(parents=True, exist_ok=True)
+    config.TIMELINE.write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
+    return timeline
+
+
 def run(board: dict[str, Any], manifest: cache.Manifest | None = None,
         force: set[str] | None = None) -> dict[str, Any]:
     """Generate what changed, then write and return the timeline."""
@@ -168,13 +179,4 @@ def run(board: dict[str, Any], manifest: cache.Manifest | None = None,
     if quota_gone:
         print("  The speech quota is used up for today. It resets at 11:00 East Africa Time.")
     runlog.stage_summary(STAGE, reused=reused, generated=generated, failed=failed, note=note)
-
-    measured = {
-        shot["id"]: wav_seconds(line_path(shot["id"]))
-        for shot in board["shots"] if line_path(shot["id"]).exists() and shot["narration"]["text"].strip()
-    }
-    timeline = build_timeline(board, measured)
-    timeline["missing_narration"] = failed
-    config.TIMELINE.parent.mkdir(parents=True, exist_ok=True)
-    config.TIMELINE.write_text(json.dumps(timeline, indent=2) + "\n", encoding="utf-8")
-    return timeline
+    return timeline_from_disk(board)
