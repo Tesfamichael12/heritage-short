@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "film": {
+    "title": "The Lamp at the Window",
+    "title_local": "ምሳሌ",
+    "logline": "A template story: an old woman lights a lamp every dusk so travellers can find the road.",
+    "language": "am",
+    "audience": "Replace this: who will watch, and where they will watch it.",
+    "intent": "Replace this: the one feeling or idea they should be left with.",
+    "target_duration_s": 71
+  },
+  "style": {
+    "style_block": "warm hand-painted gouache illustration, soft grain, golden-hour light, muted earth palette, gentle brush texture",
+    "negative": "no text, no letters, no watermark, no extra fingers"
+  },
+  "characters": [
+    {
+      "id": "elder",
+      "description": "an Ethiopian woman in her seventies with a lined, kind face, white netela shawl over a grey dress, silver hair in tight braids",
+      "sheet_prompt": "character reference sheet of one woman, front view and three-quarter view, plain background, full figure, even light",
+      "seed": 11
+    }
+  ],
+  "narration": {
+    "model": "gemini-3.8-flash-tts",
+    "fallback_model": "gemini-3.8-flash-lite-tts",
+    "voice": "Kore",
+    "style_instruction": "calm, warm, unhurried, like an elder telling a story at home",
+    "lead_in_s": 0.4,
+    "tail_s": 0.6
+  },
+  "keyframes": {
+    "model": "@cf/black-forest-labs/flux-2-klein-4b",
+    "size": 1024,
+    "max_attempts": 3
+  },
+  "video": {
+    "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "width": 704,
+    "height": 704,
+    "num_frames": 49,
+    "steps": 20,
+    "guidance": 5.0,
+    "precision": "fp16",
+    "batch_size": 3,
+    "time_budget_min": 150
+  },
+  "music": {
+    "model": "ACE-Step/Ace-Step1.5",
+    "caption": "gentle instrumental underscore, solo krar and soft washint flute over a warm drone, sparse, intimate, no strong lead melody, nostalgic and hopeful",
+    "bpm": 72,
+    "keyscale": "D Minor",
+    "duration_s": 95,
+    "instrumental": true,
+    "seeds": [
+      7,
+      21,
+      42
+    ],
+    "chosen": null,
+    "cues": [
+      {
+        "shot": "s01",
+        "note": "Enter quietly on the drone alone."
+      },
+      {
+        "shot": "s07",
+        "note": "The theme returns, a little fuller, then fades under the end card."
+      }
+    ]
+  },
+  "mix": {
+    "voice_lufs": -16,
+    "music_lufs": -20,
+    "target_lufs": -14,
+    "true_peak_db": -1.0,
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 300,
+      "release_ms": 1500
+    }
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "reason": "Template shot 1: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "wide",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 101
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 201,
+        "priority": 1,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s02",
+      "reason": "Template shot 2: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "medium",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 102
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 202,
+        "priority": 2,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "left"
+      }
+    },
+    {
+      "id": "s03",
+      "reason": "Template shot 3: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "close",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 103
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 203,
+        "priority": 3,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s04",
+      "reason": "Template shot 4: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "insert",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 104
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 204,
+        "priority": 4,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "right"
+      }
+    },
+    {
+      "id": "s05",
+      "reason": "Template shot 5: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "medium_close",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 105
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 205,
+        "priority": 5,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s06",
+      "reason": "Template shot 6: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "wide",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 106
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 206,
+        "priority": 6,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "up"
+      }
+    },
+    {
+      "id": "s07",
+      "reason": "Template shot 7: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "close",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 107
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 207,
+        "priority": 7,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s08",
+      "reason": "Template shot 8: say in one sentence why the film needs this shot.",
+      "beat": "What changes in the story here.",
+      "shot_size": "extreme_wide",
+      "duration_s": 8.5,
+      "narration": {
+        "text": "ይህ ምሳሌ ነው።",
+        "subtitle_en": "This is an example line."
+      },
+      "keyframe": {
+        "prompt": "An old woman lights an oil lamp at a small window at dusk, subject centred in the frame",
+        "characters": [
+          "elder"
+        ],
+        "seed": 108
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "She slowly raises the lamp, the camera pushes in gently, the flame flickers",
+        "seed": 208,
+        "priority": 8,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    }
+  ],
+  "end_card": {
+    "lines": [
+      "This film was made with AI",
+      "Images: FLUX.2 klein · Video: Wan 2.2",
+      "Music: ACE-Step 1.5 · Voice: Gemini TTS",
+      "Story and direction by a human"
+    ],
+    "duration_s": 3
+  }
+}

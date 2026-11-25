@@ -1,0 +1,8 @@
+# Cache keys include content hashes, so files must be byte-identical on every clone.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.wav binary
+*.mp3 binary
+*.mp4 binary
+*.ttf binary

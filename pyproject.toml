@@ -1,0 +1,26 @@
+[project]
+name = "heritage-short"
+version = "0.1.0"
+description = "A storyboard-driven pipeline that turns one JSON file into a narrated, scored short film using free and open models."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "jsonschema",
+    "requests",
+    "python-dotenv",
+    "pillow",
+    "google-genai",
+    "kaggle",
+    "six>=1.17.0",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

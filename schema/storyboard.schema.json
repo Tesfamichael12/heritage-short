@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/heritage-short/schema/storyboard.schema.json",
+  "title": "Heritage Short storyboard",
+  "description": "The contract between every stage of the pipeline. Every prompt, seed, model name and parameter lives here, not in code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "film", "style", "characters", "narration", "keyframes", "video", "music", "mix", "shots", "end_card"],
+  "properties": {
+    "version": { "const": 1 },
+
+    "film": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "logline", "language", "audience", "intent", "target_duration_s"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "title_local": { "type": "string", "description": "The title in the narration language." },
+        "logline": { "type": "string", "minLength": 10, "description": "One sentence that sums up the story." },
+        "language": { "type": "string", "pattern": "^[a-z]{2,3}$", "description": "Narration language code, for example am." },
+        "audience": { "type": "string", "minLength": 10, "description": "Who will watch, and where." },
+        "intent": { "type": "string", "minLength": 10, "description": "What they should feel or understand at the end." },
+        "target_duration_s": { "type": "number", "minimum": 60, "maximum": 90 }
+      }
+    },
+
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["style_block"],
+      "properties": {
+        "style_block": { "type": "string", "minLength": 10, "description": "Fixed description of the look, appended to every image prompt." },
+        "negative": { "type": "string", "description": "What to avoid, appended as plain text because the image model has no negative prompt." }
+      }
+    },
+
+    "characters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "description", "sheet_prompt", "seed"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "description": { "type": "string", "minLength": 10, "description": "Fixed wording used in every prompt that shows this character." },
+          "sheet_prompt": { "type": "string", "minLength": 10, "description": "Prompt for the reference sheet image." },
+          "seed": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+
+    "narration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "voice", "style_instruction"],
+      "properties": {
+        "model": { "type": "string" },
+        "fallback_model": { "type": "string" },
+        "voice": { "type": "string" },
+        "style_instruction": { "type": "string" },
+        "lead_in_s": { "type": "number", "minimum": 0, "maximum": 3, "default": 0.4 },
+        "tail_s": { "type": "number", "minimum": 0, "maximum": 3, "default": 0.6 }
+      }
+    },
+
+    "keyframes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "size"],
+      "properties": {
+        "model": { "type": "string" },
+        "size": { "type": "integer", "minimum": 512, "maximum": 1920, "multipleOf": 16, "description": "Keyframes are square so both aspect ratios can be cropped from one image." },
+        "max_attempts": { "type": "integer", "minimum": 1, "maximum": 5, "default": 3 }
+      }
+    },
+
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "width", "height", "num_frames", "steps", "guidance"],
+      "properties": {
+        "model": { "type": "string" },
+        "width": { "type": "integer", "minimum": 256, "maximum": 1280, "multipleOf": 32 },
+        "height": { "type": "integer", "minimum": 256, "maximum": 1280, "multipleOf": 32 },
+        "num_frames": { "type": "integer", "minimum": 17, "maximum": 121, "description": "Must be 4n+1." },
+        "steps": { "type": "integer", "minimum": 1, "maximum": 50 },
+        "guidance": { "type": "number", "minimum": 0, "maximum": 10 },
+        "precision": { "enum": ["fp16", "fp32"], "default": "fp16" },
+        "batch_size": { "type": "integer", "minimum": 1, "maximum": 12, "default": 3, "description": "Shots per Kaggle job." },
+        "time_budget_min": { "type": "integer", "minimum": 10, "maximum": 660, "default": 150 }
+      }
+    },
+
+    "music": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "caption", "bpm", "keyscale", "duration_s", "instrumental", "seeds", "chosen"],
+      "properties": {
+        "model": { "type": "string" },
+        "caption": { "type": "string", "minLength": 10 },
+        "bpm": { "type": "integer", "minimum": 30, "maximum": 300 },
+        "keyscale": { "type": "string" },
+        "duration_s": { "type": "number", "minimum": 30, "maximum": 240 },
+        "instrumental": { "type": "boolean" },
+        "seeds": { "type": "array", "minItems": 1, "maxItems": 8, "items": { "type": "integer", "minimum": 0 } },
+        "chosen": { "type": ["integer", "null"], "minimum": 0, "description": "Index into seeds of the candidate that was chosen, or null before the choice." },
+        "choice_reason": { "type": "string" },
+        "cues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["shot", "note"],
+            "properties": {
+              "shot": { "type": "string", "pattern": "^s[0-9]{2}$" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "mix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_lufs", "true_peak_db", "duck"],
+      "properties": {
+        "voice_lufs": { "type": "number", "minimum": -30, "maximum": -10, "default": -16 },
+        "music_lufs": { "type": "number", "minimum": -40, "maximum": -10, "default": -20 },
+        "target_lufs": { "type": "number", "minimum": -24, "maximum": -9 },
+        "true_peak_db": { "type": "number", "minimum": -9, "maximum": 0 },
+        "duck": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["threshold", "ratio", "attack_ms", "release_ms"],
+          "properties": {
+            "threshold": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+            "ratio": { "type": "number", "minimum": 1, "maximum": 20 },
+            "attack_ms": { "type": "number", "minimum": 0.01, "maximum": 2000 },
+            "release_ms": { "type": "number", "minimum": 0.01, "maximum": 9000 }
+          }
+        }
+      }
+    },
+
+    "shots": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 12,
+      "items": { "$ref": "#/$defs/shot" }
+    },
+
+    "end_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lines", "duration_s"],
+      "properties": {
+        "lines": { "type": "array", "minItems": 1, "maxItems": 6, "items": { "type": "string", "minLength": 1 }, "description": "Must say the film was made with AI." },
+        "duration_s": { "type": "number", "minimum": 2, "maximum": 5 }
+      }
+    }
+  },
+
+  "$defs": {
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "reason", "shot_size", "duration_s", "narration", "keyframe", "motion"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^s[0-9]{2}$" },
+        "reason": { "type": "string", "minLength": 10, "description": "Why this shot exists. If you cannot say it in a sentence, the film may not need the shot." },
+        "beat": { "type": "string", "description": "What changes in the story during this shot." },
+        "shot_size": { "enum": ["extreme_wide", "wide", "medium", "medium_close", "close", "extreme_close", "insert"] },
+        "duration_s": { "type": "number", "minimum": 2, "maximum": 15, "description": "Planned length. The real length is this or the narration length plus padding, whichever is longer." },
+        "narration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "subtitle_en"],
+          "properties": {
+            "text": { "type": "string", "description": "The line as spoken, in the narration language. Empty for a silent shot." },
+            "subtitle_en": { "type": "string", "description": "English subtitle for this line. Empty for a silent shot." }
+          }
+        },
+        "keyframe": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["prompt", "seed"],
+          "properties": {
+            "prompt": { "type": "string", "minLength": 10, "description": "What this shot shows. The style block and character descriptions are added automatically." },
+            "characters": { "type": "array", "items": { "type": "string" }, "maxItems": 3, "uniqueItems": true },
+            "seed": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "priority"],
+          "properties": {
+            "mode": { "enum": ["wan", "kenburns"] },
+            "prompt": { "type": "string", "description": "Motion and camera only. The image already holds the subject." },
+            "seed": { "type": "integer", "minimum": 0 },
+            "priority": { "type": "integer", "minimum": 1, "description": "1 is rendered first when GPU time is short." },
+            "zoom_from": { "type": "number", "minimum": 1, "maximum": 1.5, "default": 1.0 },
+            "zoom_to": { "type": "number", "minimum": 1, "maximum": 1.5, "default": 1.1 },
+            "pan": { "enum": ["none", "left", "right", "up", "down"], "default": "none" }
+          }
+        },
+        "framing": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "focus_x": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.5 },
+            "focus_y": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.5 }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+kaggle.json
+.kaggle/
+access_token
+
+# Private working notes (plan, rubric, the brief)
+local/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Local store of every generated file by cache key, and job build folders
+.cache/
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
