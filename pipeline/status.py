@@ -13,6 +13,7 @@ from typing import Any
 
 from . import keyframes, music, narration, shots, validate
 from .common import cache, runlog
+from .providers import gemini
 
 GEMINI_RESET_UTC_HOUR = 8   # midnight Pacific, which is 11:00 East Africa Time
 MARK = {"fresh": "ok", "stale": "STALE", "missing": "-"}
@@ -126,7 +127,10 @@ def main() -> int:
     used = usage(runlog.read())
     print("\nFree allowance used by this project since each provider's last reset:")
     calls = used["gemini_calls_since_reset"]
-    print("  Gemini (resets 11:00 EAT): " + (", ".join(f"{m} x{n}" for m, n in sorted(calls.items())) or "no calls"))
+    print("  Gemini (resets 11:00 EAT; counts every attempt, so failed ones too):")
+    for model in sorted(set(calls) | set(gemini.LIMITS)):
+        limit = gemini.LIMITS.get(model, {}).get("rpd")
+        print(f"    {model:28s} {calls.get(model, 0)}" + (f" of {limit} a day" if limit else ""))
     print(f"  Cloudflare (resets 03:00 EAT): {used['cloudflare_images_today']} images, "
           f"about {used['cloudflare_neurons_today_estimated']:.0f} of 10,000 neurons")
     print(f"  Kaggle (weekly): {used['kaggle_gpu_session_minutes_this_week']:.0f} GPU session minutes")

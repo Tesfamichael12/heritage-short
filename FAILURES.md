@@ -31,3 +31,12 @@ The brief warned this might happen. We checked each provider's official document
 | Wan 2.2 TI2V-5B on a Kaggle T4, "draft at 480p" | The model card asks for 24 GB of memory and lists one size (1280 by 704). A T4 has 16 GB. We found no published T4 timing anywhere. | A calibration job measures it before any batch is queued. See `EXPERIMENTS.md`. |
 | Kaggle's P100 GPU | Retired. The CLI accepts the name but runs on a replacement. | Jobs request `NvidiaTeslaT4` explicitly. |
 | Gemini speech "is free on the API" | True, but Google publishes no free-tier request limits; they are only visible per project on the rate-limit dashboard. | We read the real limits from the dashboard and record them in `COSTS.md`. |
+
+## F4. The speech model rejected the request format
+
+- **When:** 26 November, 17:50, the first real speech call (`make smoke`).
+- **What broke:** `gemini-3.8-flash-tts` answered `400 INVALID_ARGUMENT: Invalid JSON payload received. Unknown name "speechConfig" at 'generation_config'`. The text call to `gemini-3.5-flash-lite` in the same run worked.
+- **Cause:** The 3.8 speech models are served through the newer Interactions API (`client.interactions.create`), not `generate_content`. The voice goes in `generation_config.speech_config` as a list, and the speaking style goes in a `speech_metadata` annotation on the text instead of being written into the text itself.
+- **Fix:** Rewrote `synthesize` in `pipeline/providers/gemini.py` against Google's speech-generation guide. The next call returned 3.2 s of 24 kHz mono audio in 5.2 s, with 13 input and 81 output tokens logged.
+- **Cost of the failure:** possibly one of the 10 speech requests allowed per day. We do not know whether a rejected request counts, so `make status` counts it.
+- **Lesson:** The installed SDK still accepted the old call without complaint, so its type hints were no guide. Only a real request found the problem. That is what the smoke test is for.
