@@ -6,6 +6,10 @@
 
 The rule this project follows: the consent record below is filled in and committed before the first keyframe, clip or narration line of the film is generated. The run log's timestamps and the commit history show the order.
 
+### Version 1 is fiction
+
+The first `storyboard.json` (committed 26 November, about 18:55 East Africa Time) is a **sample story invented by the AI assistant** at the author's request, to prove the pipeline end to end before the real family story is ready. It depicts and names no real person: the grandmother is fictional and is called only "Emama" (grandmother). No consent was needed for it, and its end card says it is a sample written with AI. The consent record below applies to the real family story that replaces it.
+
 ### How real people are handled
 
 - **No real face.** The character in the film is an illustrated figure described in words in `storyboard.json`. No photograph of any person is used as an input to any model.

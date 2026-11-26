@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "film": {
+    "title": "The Meskel Flowers",
+    "title_local": "የመስቀል አበቦች",
+    "logline": "Every September a grandmother presses one Meskel flower for the son who left for the city; years later her family finds thirty of them.",
+    "language": "am",
+    "audience": "SAMPLE (fiction): Ethiopians aged 20 to 40 who live away from their home town and parents, watching on a phone with sound on.",
+    "intent": "SAMPLE (fiction): leave the viewer feeling the quiet, patient love of a parent at home, and wanting to call them.",
+    "target_duration_s": 73
+  },
+  "style": {
+    "style_block": "warm hand-painted gouache illustration, soft paper grain, golden Ethiopian highland light, muted palette of ochre, sage green, indigo and warm yellow, gentle simplified shapes, calm composition",
+    "negative": "no text, no letters, no watermark, no extra fingers, no modern objects, no photorealism"
+  },
+  "characters": [
+    {
+      "id": "emama",
+      "description": "an Ethiopian grandmother in her sixties, slim, warm brown skin, kind lined face, grey hair in neat braids, wearing a long white cotton habesha dress and a white netela shawl with a thin green, yellow and red woven border, a small silver cross pendant",
+      "sheet_prompt": "character reference sheet of one woman, front view and three-quarter view side by side, plain cream background, full figure, even soft light",
+      "seed": 11
+    }
+  ],
+  "narration": {
+    "model": "gemini-3.8-flash-lite-tts",
+    "fallback_model": "gemini-3.8-flash-lite-tts",
+    "voice": "Kore",
+    "style_instruction": "calm, warm, unhurried, like a grandchild remembering their grandmother",
+    "lead_in_s": 0.4,
+    "tail_s": 0.6
+  },
+  "keyframes": {
+    "model": "@cf/black-forest-labs/flux-2-klein-4b",
+    "size": 1024,
+    "max_attempts": 3
+  },
+  "video": {
+    "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+    "width": 704,
+    "height": 704,
+    "num_frames": 49,
+    "steps": 20,
+    "guidance": 5.0,
+    "precision": "fp16",
+    "batch_size": 3,
+    "time_budget_min": 60
+  },
+  "music": {
+    "model": "acestep-v15-turbo",
+    "caption": "gentle Ethiopian-inspired instrumental underscore, soft krar plucks and a breathy washint flute over a warm low drone, tizita mood, sparse and intimate, nostalgic and hopeful, slow",
+    "bpm": 72,
+    "keyscale": "D Minor",
+    "duration_s": 95,
+    "instrumental": true,
+    "seeds": [
+      7,
+      21,
+      42
+    ],
+    "chosen": null,
+    "cues": [
+      {
+        "shot": "s01",
+        "note": "Enter quietly on the drone and a few krar notes."
+      },
+      {
+        "shot": "s07",
+        "note": "The flute theme returns, a little fuller, then fades under the end card."
+      }
+    ]
+  },
+  "mix": {
+    "voice_lufs": -16,
+    "music_lufs": -20,
+    "target_lufs": -14,
+    "true_peak_db": -1.0,
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 300,
+      "release_ms": 1500
+    }
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "reason": "Sets the place and the season before any person appears, so the flowers mean something when she picks them.",
+      "beat": "The world of the story: the highlands in Meskel season.",
+      "shot_size": "extreme_wide",
+      "duration_s": 9,
+      "narration": {
+        "text": "በየዓመቱ መስከረም ሲጠባ፣ የመንደራችን ኮረብታዎች በአደይ አበባ ይደምቃሉ።",
+        "subtitle_en": "Every September, the hills around our village turn gold with Meskel flowers."
+      },
+      "keyframe": {
+        "prompt": "Ethiopian highland village at dawn in late September, round thatched tukul houses and tall eucalyptus trees, gentle hills covered in bright yellow adey abeba daisies, mist in the valley, subject centred",
+        "characters": [],
+        "seed": 101
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 201,
+        "priority": 4,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "right"
+      }
+    },
+    {
+      "id": "s02",
+      "reason": "Introduces her through a habit, not a face: the yearly walk is the ritual the whole film rests on.",
+      "beat": "We meet her, already doing the thing she always did.",
+      "shot_size": "wide",
+      "duration_s": 8,
+      "narration": {
+        "text": "እማማ በማለዳ ተነስታ ቅርጫቷን ይዛ ወደ ኮረብታው ትወጣ ነበር።",
+        "subtitle_en": "Grandmother would rise at dawn and climb the hill with her basket."
+      },
+      "keyframe": {
+        "prompt": "the grandmother walking up a narrow path through a hillside of yellow adey abeba daisies at dawn, carrying a woven basket, seen from behind and slightly to the side, subject centred",
+        "characters": [
+          "emama"
+        ],
+        "seed": 102
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "She walks slowly up the path, her shawl moves in the breeze, the flowers sway, the camera follows gently",
+        "seed": 202,
+        "priority": 1,
+        "zoom_from": 1.0,
+        "zoom_to": 1.08,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s03",
+      "reason": "The detail that turns a festival custom into a private one; the audience must see the single flower.",
+      "beat": "The mystery: why one flower?",
+      "shot_size": "close",
+      "duration_s": 8,
+      "narration": {
+        "text": "እፍኝ አበባ ትለቅማለች፤ ሁሌም ግን አንዷን ለብቻ ታስቀምጣለች።",
+        "subtitle_en": "She picked a handful, but she always set one flower apart."
+      },
+      "keyframe": {
+        "prompt": "close-up of an old woman's hands holding a small bunch of yellow adey abeba daisies, one single daisy held apart between her fingers, white shawl edge with a green yellow red border, soft dawn light, subject centred",
+        "characters": [
+          "emama"
+        ],
+        "seed": 103
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "Her fingers gently separate one yellow flower from the bunch, petals tremble in the breeze, slow push in",
+        "seed": 203,
+        "priority": 2,
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s04",
+      "reason": "Answers the mystery and names the absence the film is about.",
+      "beat": "The reason: a son far away.",
+      "shot_size": "medium",
+      "duration_s": 9,
+      "narration": {
+        "text": "ያቺ አበባ ወደ አዲስ አበባ ሄዶ ብዙም ለማይመጣው ልጇ ነበረች።",
+        "subtitle_en": "That one was for her son, who had left for Addis Ababa and rarely came home."
+      },
+      "keyframe": {
+        "prompt": "the grandmother sitting on a low wooden stool at the doorway of her tukul at dusk, looking out at a dirt road that leads away over the hills, a single yellow daisy in her lap, subject centred",
+        "characters": [
+          "emama"
+        ],
+        "seed": 104
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 204,
+        "priority": 5,
+        "zoom_from": 1.05,
+        "zoom_to": 1.15,
+        "pan": "left"
+      }
+    },
+    {
+      "id": "s05",
+      "reason": "Shows where the love is stored, and plants the object the ending pays off.",
+      "beat": "The flower goes into the book.",
+      "shot_size": "insert",
+      "duration_s": 9,
+      "narration": {
+        "text": "በአሮጌው መጽሐፍ ቅዱሷ ገጾች መካከል አበባዋን አድርቃ ታስቀምጣት ነበር።",
+        "subtitle_en": "She pressed it between the pages of her old Bible."
+      },
+      "keyframe": {
+        "prompt": "close-up of an old leather-bound Bible open on a wooden table beside a small glowing oil lamp, an old woman's hand laying one yellow daisy flat on the page, warm lamplight, subject centred",
+        "characters": [
+          "emama"
+        ],
+        "seed": 105
+      },
+      "motion": {
+        "mode": "wan",
+        "prompt": "Her hand slowly closes the book over the flower, the lamp flame flickers softly",
+        "seed": 205,
+        "priority": 3,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s06",
+      "reason": "The public festival and her private prayer in one image; the emotional peak before the time jump.",
+      "beat": "Faith and longing at the Meskel bonfire.",
+      "shot_size": "wide",
+      "duration_s": 9,
+      "narration": {
+        "text": "የደመራው እሳት ሲነድ፣ ለልጇ በጸጥታ ትጸልይ ነበር።",
+        "subtitle_en": "When the Demera bonfire burned, she prayed quietly for him."
+      },
+      "keyframe": {
+        "prompt": "night, a tall Demera bonfire burning in a village clearing with people gathered in white clothes, the grandmother standing a little apart in the foreground holding her shawl, firelight on her face, subject centred",
+        "characters": [
+          "emama"
+        ],
+        "seed": 106
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 206,
+        "priority": 6,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "up"
+      }
+    },
+    {
+      "id": "s07",
+      "reason": "The payoff: the count makes years of silent love visible at once.",
+      "beat": "The reveal, years later.",
+      "shot_size": "insert",
+      "duration_s": 10,
+      "narration": {
+        "text": "ከብዙ ዓመታት በኋላ መጽሐፉን ስንከፍተው ሠላሳ የደረቁ አበቦች አገኘን።",
+        "subtitle_en": "Years later, when we opened the book, we found thirty pressed flowers."
+      },
+      "keyframe": {
+        "prompt": "an old open Bible on a wooden table in morning light, many dried and pressed yellow daisies spilling from between its pages across the table, dust in a sunbeam, no people, subject centred",
+        "characters": [],
+        "seed": 107
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 207,
+        "priority": 7,
+        "zoom_from": 1.15,
+        "zoom_to": 1.0,
+        "pan": "none"
+      }
+    },
+    {
+      "id": "s08",
+      "reason": "Returns to the hill without her, so the ending lands as memory and a promise.",
+      "beat": "Her absence, and the family's promise.",
+      "shot_size": "extreme_wide",
+      "duration_s": 8,
+      "narration": {
+        "text": "አንድም መስከረም አልረሳችውም። እኛም አንረሳትም።",
+        "subtitle_en": "She never forgot a single September. Neither will we."
+      },
+      "keyframe": {
+        "prompt": "the same hillside of yellow adey abeba daisies at sunrise, an empty narrow path winding up the hill, a white netela shawl resting on a wooden fence post, mist, subject centred",
+        "characters": [],
+        "seed": 108
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 208,
+        "priority": 8,
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "left"
+      }
+    }
+  ],
+  "end_card": {
+    "lines": [
+      "This film was made with AI",
+      "A sample story written with AI; fiction",
+      "Images: FLUX.2 klein · Video: Wan 2.2",
+      "Music: ACE-Step 1.5 · Voice: Gemini TTS"
+    ],
+    "duration_s": 3
+  }
+}
