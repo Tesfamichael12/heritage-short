@@ -2,7 +2,7 @@
 
 ## 1. Consent
 
-**Status on 26 November 2026, 01:45 East Africa Time: no consent has been recorded yet, and nothing depicting or voicing a real person has been generated.** No model call of any kind has been made yet. The smoke test, which runs first, uses generic content only: a lamp on a windowsill and the sentence "Hello. This is a voice test."
+**Status on 26 November 2026, 22:15 East Africa Time:** version 2, *The Comet of Dessie*, is the author's own childhood memory. The record below was written before any of its images or narration were generated. No model call of any kind has been made yet. The smoke test, which runs first, uses generic content only: a lamp on a windowsill and the sentence "Hello. This is a voice test."
 
 The rule this project follows: the consent record below is filled in and committed before the first keyframe, clip or narration line of the film is generated. The run log's timestamps and the commit history show the order.
 
@@ -22,14 +22,13 @@ To be completed by the author before generation starts.
 
 | Item | Record |
 | --- | --- |
-| Whose story the film tells | *pending* |
-| Relationship to the author | *pending* |
-| Who gave consent (the person, or which family member on their behalf) | *pending* |
-| Date and how it was given (in person, voice note, message) | *pending* |
-| What they agreed to: the story told publicly, the narration text, an illustrated likeness | *pending* |
-| Where the evidence is kept (privately, not in this repository) | *pending* |
-| Names or details they asked to leave out | *pending* |
-| Shown the near-final film before release, and their response | *pending* |
+| Whose story the film tells | The author's own: a memory of playing street football in Dessie at the age of seven, and of his grandmother's explanation of the town's name |
+| Relationship to the author | It is about the author himself; his grandmother and three childhood friends (Seid, Dawit, Hayat) appear in it |
+| Who gave consent | The author, for his own story, by writing it and asking for it to be filmed (26 November 2026) |
+| What is shown of the other people | Illustrated figures drawn from words only; no photograph, recording or likeness of any real person was used. The grandmother has no name in the film. The friends appear by first name only, in the narration of one line (Hayat) and the subtitles of another (Dawit) |
+| Consent from the grandmother and the three friends | **Not recorded.** The author should confirm with them (or with family for the grandmother) or replace the friends' first names before the film is published. Changing a name is one edit to `storyboard.json` and regenerates only that shot's line |
+| Names or details left out | Surnames, the exact neighbourhood (sefer), and any detail that would identify the family's home |
+| Shown the near-final film before release | See DESIGN.md, test 2 |
 
 ## 2. Private data and where it goes
 

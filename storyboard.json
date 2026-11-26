@@ -1,31 +1,37 @@
 {
   "version": 1,
   "film": {
-    "title": "The Meskel Flowers",
-    "title_local": "የመስቀል አበቦች",
-    "logline": "Every September a grandmother presses one Meskel flower for the son who left for the city; years later her family finds thirty of them.",
+    "title": "The Comet of Dessie",
+    "title_local": "የደሴ ኮሜት",
+    "logline": "A seven-year-old in Dessie builds a football from socks and string, kicks it into the fog in a 4–4 match, and never finds it; his grandmother tells him what comets are for.",
     "language": "am",
-    "audience": "SAMPLE (fiction): Ethiopians aged 20 to 40 who live away from their home town and parents, watching on a phone with sound on.",
-    "intent": "SAMPLE (fiction): leave the viewer feeling the quiet, patient love of a parent at home, and wanting to call them.",
-    "target_duration_s": 73
+    "audience": "Ethiopians in their twenties and thirties, at home and abroad, especially anyone who played street football as a child; on a phone, sound on.",
+    "intent": "Leave them smiling at their own childhood and proud to say where they are from.",
+    "target_duration_s": 77
   },
   "style": {
-    "style_block": "warm hand-painted gouache illustration, soft paper grain, golden Ethiopian highland light, muted palette of ochre, sage green, indigo and warm yellow, gentle simplified shapes, calm composition",
-    "negative": "no text, no letters, no watermark, no extra fingers, no modern objects, no photorealism"
+    "style_block": "playful hand-painted gouache storybook illustration, soft paper grain, warm Ethiopian highland light, palette of red earth, eucalyptus green, sky blue and warm white, expressive simple shapes, lively and joyful",
+    "negative": "no text, no letters, no watermark, no extra fingers, no extra limbs, no photorealism, no modern football kits"
   },
   "characters": [
     {
-      "id": "emama",
-      "description": "an Ethiopian grandmother in her sixties, slim, warm brown skin, kind lined face, grey hair in neat braids, wearing a long white cotton habesha dress and a white netela shawl with a thin green, yellow and red woven border, a small silver cross pendant",
-      "sheet_prompt": "a single full-length portrait of one woman standing alone, three-quarter view, face clearly visible, plain cream background, even soft light, only one figure",
-      "seed": 11
+      "id": "boy",
+      "description": "an Ethiopian boy of seven, slim, with short curly black hair, big bright eyes and a gap-toothed grin, wearing an oversized faded green wool sweater with rolled-up sleeves, brown shorts and plastic sandals",
+      "sheet_prompt": "a single full-length portrait of one boy standing alone, three-quarter view, face clearly visible, plain cream background, even soft light, only one figure",
+      "seed": 31
+    },
+    {
+      "id": "grandmother",
+      "description": "an Ethiopian grandmother in her seventies with a round, laughing face and deep smile lines, grey hair under a white headscarf, wrapped in a thick white cotton gabi blanket with a thin coloured border",
+      "sheet_prompt": "a single full-length portrait of one old woman standing alone, three-quarter view, face clearly visible, plain cream background, even soft light, only one figure",
+      "seed": 41
     }
   ],
   "narration": {
-    "model": "gemini-3.8-flash-lite-tts",
+    "model": "gemini-3.8-flash-tts",
     "fallback_model": "gemini-3.8-flash-lite-tts",
     "voice": "Kore",
-    "style_instruction": "calm, warm, unhurried, like a grandchild remembering their grandmother",
+    "style_instruction": "warm, playful and smiling, like an adult happily remembering childhood, with a little wonder",
     "lead_in_s": 0.4,
     "tail_s": 0.6
   },
@@ -85,241 +91,232 @@
   "shots": [
     {
       "id": "s01",
-      "reason": "Sets the place and the season before any person appears, so the flowers mean something when she picks them.",
-      "beat": "The world of the story: the highlands in Meskel season.",
+      "reason": "Opens on the legend of the town's name, which the last line pays off, and turns 'comet' into the film's central image.",
+      "beat": "The legend: Dessie means joy.",
       "shot_size": "extreme_wide",
-      "duration_s": 9,
+      "duration_s": 10,
       "narration": {
-        "text": "በየዓመቱ መስከረም ሲጠባ፣ የመንደራችን ኮረብታዎች በአደይ አበባ ይደምቃሉ።",
-        "subtitle_en": "Every September, the hills around our village turn gold with Meskel flowers."
+        "text": "አያቴ ትል ነበር፤ ንጉሡ በጦሳ ተራራ ሥር ሰፍረው ኮሜት አዩ፤ ደስ ብሏቸውም ቦታውን 'ደሴ' አሉት።",
+        "subtitle_en": "Grandmother said an emperor camped under Mount Tossa saw a comet, and named the place Dessie: my joy."
       },
       "keyframe": {
-        "prompt": "Ethiopian highland village at dawn in late September, round thatched tukul houses and tall eucalyptus trees, gentle hills covered in bright yellow adey abeba daisies, mist in the valley, subject centred",
+        "prompt": "night over Mount Tossa in the Ethiopian highlands, a bright comet with a long glowing tail streaking above the mountain, a few small canvas tents of an old royal camp at the foot of the mountain lit by campfires, starry sky, subject centred",
         "characters": [],
-        "seed": 101
+        "seed": 301
       },
       "motion": {
         "mode": "kenburns",
         "prompt": "",
-        "seed": 201,
-        "priority": 4,
+        "seed": 401,
+        "priority": 1,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "up"
+      }
+    },
+    {
+      "id": "s02",
+      "reason": "Introduces the boy through the thing he makes with his hands; the homemade ball is the hero object.",
+      "beat": "The boy builds his comet.",
+      "shot_size": "close",
+      "duration_s": 9,
+      "narration": {
+        "text": "በሰባት ዓመቴ የራሴን ኮሜት ሠራሁ፤ ከአሮጌ ካልሲ፣ ከፌስታልና ከሲባጎ።",
+        "subtitle_en": "At seven, I made a comet of my own: old socks, plastic bags and string."
+      },
+      "keyframe": {
+        "prompt": "a seven-year-old boy sitting on a wooden step in a dirt compound, tongue out in concentration, winding string around a lopsided ball made of old socks and colourful plastic bags, morning light, subject centred",
+        "characters": [
+          "boy"
+        ],
+        "seed": 302
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 402,
+        "priority": 2,
+        "zoom_from": 1.0,
+        "zoom_to": 1.14,
+        "pan": "none"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.42
+      }
+    },
+    {
+      "id": "s03",
+      "reason": "Shows the place as a playground: the tilted pitch is the visual joke the whole match depends on.",
+      "beat": "The world: a pitch on a slope.",
+      "shot_size": "wide",
+      "duration_s": 8,
+      "narration": {
+        "text": "ደሴ ውስጥ ምንም ጠፍጣፋ ነገር የለም፤ ሜዳችንም ተራራውን ይወጣ ነበር።",
+        "subtitle_en": "Nothing in Dessie is flat. Even our football pitch climbed the mountain."
+      },
+      "keyframe": {
+        "prompt": "a steep strip of red earth used as a football pitch on a hillside, a eucalyptus fence on one side and a drainage ditch on the other, two stones as a goal at the top and two schoolbags as a goal at the bottom, a group of children chasing a lopsided homemade ball, the boy in a green sweater among them, tin roofs of the town climbing the mountain behind, subject centred",
+        "characters": [
+          "boy"
+        ],
+        "seed": 303
+      },
+      "motion": {
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 403,
+        "priority": 3,
         "zoom_from": 1.0,
         "zoom_to": 1.1,
         "pan": "right"
       }
     },
     {
-      "id": "s02",
-      "reason": "Introduces her through a habit, not a face: the yearly walk is the ritual the whole film rests on.",
-      "beat": "We meet her, already doing the thing she always did.",
-      "shot_size": "wide",
-      "duration_s": 8,
-      "narration": {
-        "text": "እማማ በማለዳ ተነስታ ቅርጫቷን ይዛ ወደ ኮረብታው ትወጣ ነበር።",
-        "subtitle_en": "Grandmother would rise at dawn and climb the hill with her basket."
-      },
-      "keyframe": {
-        "prompt": "the grandmother walking up a narrow path through a hillside of yellow adey abeba daisies at dawn, carrying a woven basket, seen from behind and slightly to the side, subject centred",
-        "characters": [
-          "emama"
-        ],
-        "seed": 102
-      },
-      "motion": {
-        "mode": "wan",
-        "prompt": "She walks slowly up the path, her shawl moves in the breeze, the flowers sway, the camera follows gently",
-        "seed": 202,
-        "priority": 1,
-        "zoom_from": 1.0,
-        "zoom_to": 1.08,
-        "pan": "none"
-      },
-      "framing": {
-        "focus_x": 0.5,
-        "focus_y": 0.3
-      }
-    },
-    {
-      "id": "s03",
-      "reason": "The detail that turns a festival custom into a private one; the audience must see the single flower.",
-      "beat": "The mystery: why one flower?",
-      "shot_size": "close",
-      "duration_s": 8,
-      "narration": {
-        "text": "እፍኝ አበባ ትለቅማለች፤ ሁሌም ግን አንዷን ለብቻ ታስቀምጣለች።",
-        "subtitle_en": "She picked a handful, but she always set one flower apart."
-      },
-      "keyframe": {
-        "prompt": "close-up of an old woman's hands holding a small bunch of yellow adey abeba daisies, one single daisy held apart between her fingers, white shawl edge with a green yellow red border, soft dawn light, subject centred",
-        "characters": [
-          "emama"
-        ],
-        "seed": 103
-      },
-      "motion": {
-        "mode": "wan",
-        "prompt": "Her fingers gently separate one yellow flower from the bunch, petals tremble in the breeze, slow push in",
-        "seed": 203,
-        "priority": 2,
-        "zoom_from": 1.0,
-        "zoom_to": 1.12,
-        "pan": "none"
-      },
-      "framing": {
-        "focus_x": 0.5,
-        "focus_y": 0.3
-      }
-    },
-    {
       "id": "s04",
-      "reason": "Answers the mystery and names the absence the film is about.",
-      "beat": "The reason: a son far away.",
+      "reason": "The comic beat: the rules, and the girl who was better than all the boys.",
+      "beat": "Fun and rivalry: Hayat's left foot.",
       "shot_size": "medium",
-      "duration_s": 9,
+      "duration_s": 10,
       "narration": {
-        "text": "ያቺ አበባ ወደ አዲስ አበባ ሄዶ ብዙም ለማይመጣው ልጇ ነበረች።",
-        "subtitle_en": "That one was for her son, who had left for Addis Ababa and rarely came home."
+        "text": "ሕጋችን ቀላል ነበር፤ ኳሱን ቦይ የከተተ ገብቶ ያወጣል። ይህ ሕግ የተወለደው በሐያት ግራ እግር ምክንያት ነው።",
+        "subtitle_en": "Our rule: kick it in the ditch, you climb in after it. Hayat's left foot is the reason that rule exists."
       },
       "keyframe": {
-        "prompt": "the grandmother sitting on a low wooden stool at the doorway of her tukul at dusk, looking out at a dirt road that leads away over the hills, a single yellow daisy in her lap, subject centred",
-        "characters": [
-          "emama"
-        ],
-        "seed": 104
+        "prompt": "a confident eight-year-old Ethiopian girl with braided hair and a faded yellow dress kicking a lopsided homemade ball hard with her left foot on a red earth slope, the ball flying towards a muddy ditch, two boys in the background clutching their heads, playful and funny, subject centred",
+        "characters": [],
+        "seed": 304
       },
       "motion": {
         "mode": "kenburns",
         "prompt": "",
-        "seed": 204,
-        "priority": 5,
-        "zoom_from": 1.05,
-        "zoom_to": 1.15,
+        "seed": 404,
+        "priority": 4,
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
         "pan": "left"
-      },
-      "framing": {
-        "focus_x": 0.5,
-        "focus_y": 0.3
       }
     },
     {
       "id": "s05",
-      "reason": "Shows where the love is stored, and plants the object the ending pays off.",
-      "beat": "The flower goes into the book.",
-      "shot_size": "insert",
+      "reason": "Raises the stakes and changes the light: the fog turns a game into a mystery.",
+      "beat": "Tension: the fog swallows the pitch.",
+      "shot_size": "wide",
       "duration_s": 9,
       "narration": {
-        "text": "በአሮጌው መጽሐፍ ቅዱሷ ገጾች መካከል አበባዋን አድርቃ ታስቀምጣት ነበር።",
-        "subtitle_en": "She pressed it between the pages of her old Bible."
+        "text": "አራት ለአራት፤ የሚቀጥለው ጎል ያሸንፋል። ያኔ ጭጋጉ ከጦሳ እንደ ነጭ ጋቢ ወረደ።",
+        "subtitle_en": "Four–four. Next goal wins. Then the fog came down from Tossa like a white gabi."
       },
       "keyframe": {
-        "prompt": "close-up of an old leather-bound Bible open on a wooden table beside a small glowing oil lamp, an old woman's hand laying one yellow daisy flat on the page, warm lamplight, subject centred",
-        "characters": [
-          "emama"
-        ],
-        "seed": 105
+        "prompt": "thick white fog rolling down from a mountain over a hillside red earth football pitch, children half hidden in the mist, the top goal of two stones disappearing into white, eucalyptus trees fading, soft grey light, subject centred",
+        "characters": [],
+        "seed": 305
       },
       "motion": {
-        "mode": "wan",
-        "prompt": "Her hand slowly closes the book over the flower, the lamp flame flickers softly",
-        "seed": 205,
-        "priority": 3,
+        "mode": "kenburns",
+        "prompt": "",
+        "seed": 405,
+        "priority": 5,
         "zoom_from": 1.0,
-        "zoom_to": 1.1,
-        "pan": "none"
-      },
-      "framing": {
-        "focus_x": 0.5,
-        "focus_y": 0.68
+        "zoom_to": 1.15,
+        "pan": "down"
       }
     },
     {
       "id": "s06",
-      "reason": "The public festival and her private prayer in one image; the emotional peak before the time jump.",
-      "beat": "Faith and longing at the Meskel bonfire.",
-      "shot_size": "wide",
-      "duration_s": 9,
+      "reason": "The climax: the kick, the vanishing ball, and the joke that ends the match.",
+      "beat": "The kick into the fog.",
+      "shot_size": "medium",
+      "duration_s": 10,
       "narration": {
-        "text": "የደመራው እሳት ሲነድ፣ ለልጇ በጸጥታ ትጸልይ ነበር።",
-        "subtitle_en": "When the Demera bonfire burned, she prayed quietly for him."
+        "text": "ምንም አላየሁም፤ ኮሜቴን ብቻ። በሙሉ ኃይሌ መታሁት፤ ጭጋጉ ውስጥ ጠፋ። ዳዊት 'ጎል!' ብሎ ጮኸ።",
+        "subtitle_en": "I couldn't see anything but my comet. I kicked it with all I had. It vanished into the fog. “GOAL!” shouted Dawit."
       },
       "keyframe": {
-        "prompt": "night, a tall Demera bonfire burning in a village clearing with people gathered in white clothes, the grandmother standing a little apart in the foreground holding her shawl, firelight on her face, subject centred",
+        "prompt": "the boy in the green sweater kicking a lopsided homemade ball with all his strength on a misty red earth slope, the ball flying up and disappearing into thick white fog, motion and excitement, subject centred",
         "characters": [
-          "emama"
+          "boy"
         ],
-        "seed": 106
+        "seed": 306
       },
       "motion": {
         "mode": "kenburns",
         "prompt": "",
-        "seed": 206,
+        "seed": 406,
         "priority": 6,
         "zoom_from": 1.0,
-        "zoom_to": 1.1,
+        "zoom_to": 1.12,
         "pan": "up"
       },
       "framing": {
         "focus_x": 0.5,
-        "focus_y": 0.3
+        "focus_y": 0.45
       }
     },
     {
       "id": "s07",
-      "reason": "The payoff: the count makes years of silent love visible at once.",
-      "beat": "The reveal, years later.",
-      "shot_size": "insert",
-      "duration_s": 10,
+      "reason": "The meaning of the film, given by the person who told the legend in shot 1.",
+      "beat": "Grandmother's wisdom.",
+      "shot_size": "medium_close",
+      "duration_s": 9,
       "narration": {
-        "text": "ከብዙ ዓመታት በኋላ መጽሐፉን ስንከፍተው ሠላሳ የደረቁ አበቦች አገኘን።",
-        "subtitle_en": "Years later, when we opened the book, we found thirty pressed flowers."
+        "text": "አያቴ ሳቀች፤ ከጋቢዋ ሥር አስገብታኝ 'ኮሜት አይቆይም፤ ደስታህ የት እንዳለ ብቻ ያሳይሃል' አለችኝ።",
+        "subtitle_en": "Grandmother laughed and pulled me under her gabi: “A comet doesn't stay. It only shows you where your joy is.”"
       },
       "keyframe": {
-        "prompt": "an old open Bible on a wooden table in morning light, many dried and pressed yellow daisies spilling from between its pages across the table, dust in a sunbeam, no people, subject centred",
-        "characters": [],
-        "seed": 107
+        "prompt": "an old woman laughing and wrapping a seven-year-old boy under her thick white gabi blanket, both sitting by a small charcoal stove with a coffee pot inside a simple home, warm firelight, cosy and tender, subject centred",
+        "characters": [
+          "grandmother",
+          "boy"
+        ],
+        "seed": 307
       },
       "motion": {
         "mode": "kenburns",
         "prompt": "",
-        "seed": 207,
+        "seed": 407,
         "priority": 7,
-        "zoom_from": 1.15,
-        "zoom_to": 1.0,
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
         "pan": "none"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.4
       }
     },
     {
       "id": "s08",
-      "reason": "Returns to the hill without her, so the ending lands as memory and a promise.",
-      "beat": "Her absence, and the family's promise.",
+      "reason": "Returns to the comet over Dessie in the present, so the name and the memory end as one image.",
+      "beat": "Pride in where he is from.",
       "shot_size": "extreme_wide",
-      "duration_s": 8,
+      "duration_s": 9,
       "narration": {
-        "text": "አንድም መስከረም አልረሳችውም። እኛም አንረሳትም።",
-        "subtitle_en": "She never forgot a single September. Neither will we."
+        "text": "ዛሬም ከየት ነህ ስባል 'ደሴ' እላለሁ፤ ከዚያም ትርጉሙን እነግራቸዋለሁ።",
+        "subtitle_en": "Today, when people ask where I'm from, I say Dessie. And then I tell them what it means."
       },
       "keyframe": {
-        "prompt": "the same hillside of yellow adey abeba daisies at sunrise, an empty narrow path winding up the hill, a white netela shawl resting on a wooden fence post, mist, subject centred",
+        "prompt": "the hillside town of Dessie at dusk with warm window lights climbing Mount Tossa, a faint comet in the deep blue sky above the mountain, in the foreground a small lopsided homemade ball of socks and string resting on a stone wall, subject centred",
         "characters": [],
-        "seed": 108
+        "seed": 308
       },
       "motion": {
         "mode": "kenburns",
         "prompt": "",
-        "seed": 208,
+        "seed": 408,
         "priority": 8,
         "zoom_from": 1.0,
         "zoom_to": 1.12,
-        "pan": "left"
+        "pan": "none"
       }
     }
   ],
   "end_card": {
     "lines": [
       "This film was made with AI",
-      "A sample story written with AI; fiction",
-      "Images: FLUX.2 klein · Video: Wan 2.2",
-      "Music: ACE-Step 1.5 · Voice: Gemini TTS"
+      "A true childhood memory from Dessie, told by the author",
+      "Images: FLUX.2 klein · Music: ACE-Step 1.5",
+      "Voice: Gemini TTS · Edit: FFmpeg"
     ],
     "duration_s": 3
   }

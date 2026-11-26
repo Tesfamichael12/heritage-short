@@ -6,6 +6,16 @@ Who the film is for, what it should leave them with, and what two rounds of test
 
 ## 1. Audience and intent
 
+**Version 2, the film that is submitted: *The Comet of Dessie*.** The author's own memory, written by the author; the storyboard was committed before any of its images or narration were generated.
+
+- **Who will watch:** Ethiopians in their twenties and thirties, at home and abroad, especially anyone who played street football as a child; on a phone, sound on.
+- **The story in one sentence (logline):** A seven-year-old in Dessie builds a football from socks and string, kicks it into the fog in a 4–4 match, and never finds it; his grandmother tells him what comets are for.
+- **What they should feel when it ends:** Leave them smiling at their own childhood and proud to say where they are from.
+- **The need, as a "how might we" sentence:** How might we make a viewer feel, in about a minute, the joy of a childhood game played with almost nothing, and the pride of a town's name?
+- **Why this story:** it is true, it is the author's, and its central image, a comet, connects a town's legend to a child's homemade ball, so the ending lands without explanation.
+
+**Version 1, the fictional sample (superseded):**
+
 **Version 1 (the fictional sample, "The Meskel Flowers").** Written by the AI assistant at the author's request and committed in `1b98b4e` at about 18:55 East Africa Time, before any picture or narration line was generated (the first `keyframes` line in `runs.jsonl` is after that commit). The author's real story replaces this section in version 2.
 
 - **Who will watch:** Ethiopians aged about 20 to 40 who live away from their home town and their parents: students and young workers in Addis Ababa or abroad.
@@ -29,7 +39,20 @@ For version 1, by the assistant. Design thinking asks for several approaches bef
 
 Every shot's reason is in `storyboard.json` (`shots[].reason`), and the schema refuses a storyboard that lacks one. The table below is copied from there when the storyboard is locked, with the shot size chosen for each and why.
 
-Version 1, copied from `storyboard.json`:
+Version 2, copied from `storyboard.json`:
+
+| Shot | Size | Reason |
+| --- | --- | --- |
+| s01 | extreme wide | Opens on the legend of the town's name, which the last line pays off, and turns 'comet' into the film's central image. |
+| s02 | close | Introduces the boy through the thing he makes with his hands; the homemade ball is the hero object. |
+| s03 | wide | Shows the place as a playground: the tilted pitch is the visual joke the whole match depends on. |
+| s04 | medium | The comic beat: the rules, and the girl who was better than all the boys. |
+| s05 | wide | Raises the stakes and changes the light: the fog turns a game into a mystery. |
+| s06 | medium | The climax: the kick, the vanishing ball, and the joke that ends the match. |
+| s07 | medium close | The meaning of the film, given by the person who told the legend in shot 1. |
+| s08 | extreme wide | Returns to the comet over Dessie in the present, so the name and the memory end as one image. |
+
+Version 1 (the sample), for the record:
 
 | Shot | Size | Reason |
 | --- | --- | --- |

@@ -1,0 +1,93 @@
+{
+  "fps": 24,
+  "shots": [
+    {
+      "id": "s01",
+      "start_s": 0.0,
+      "duration_s": 9.0,
+      "frames": 216,
+      "planned_s": 9,
+      "narration_s": 7.97,
+      "narration_start_s": 0.4,
+      "stretched": false
+    },
+    {
+      "id": "s02",
+      "start_s": 9.0,
+      "duration_s": 8.0,
+      "frames": 192,
+      "planned_s": 8,
+      "narration_s": 6.76,
+      "narration_start_s": 9.4,
+      "stretched": false
+    },
+    {
+      "id": "s03",
+      "start_s": 17.0,
+      "duration_s": 8.0,
+      "frames": 192,
+      "planned_s": 8,
+      "narration_s": 6.42,
+      "narration_start_s": 17.4,
+      "stretched": false
+    },
+    {
+      "id": "s04",
+      "start_s": 25.0,
+      "duration_s": 9.0,
+      "frames": 216,
+      "planned_s": 9,
+      "narration_s": 5.67,
+      "narration_start_s": 25.4,
+      "stretched": false
+    },
+    {
+      "id": "s05",
+      "start_s": 34.0,
+      "duration_s": 9.0,
+      "frames": 216,
+      "planned_s": 9,
+      "narration_s": 6.32,
+      "narration_start_s": 34.4,
+      "stretched": false
+    },
+    {
+      "id": "s06",
+      "start_s": 43.0,
+      "duration_s": 9.0,
+      "frames": 216,
+      "planned_s": 9,
+      "narration_s": 5.88,
+      "narration_start_s": 43.4,
+      "stretched": false
+    },
+    {
+      "id": "s07",
+      "start_s": 52.0,
+      "duration_s": 10.0,
+      "frames": 240,
+      "planned_s": 10,
+      "narration_s": 7.04,
+      "narration_start_s": 52.4,
+      "stretched": false
+    },
+    {
+      "id": "s08",
+      "start_s": 62.0,
+      "duration_s": 8.0,
+      "frames": 192,
+      "planned_s": 8,
+      "narration_s": 4.57,
+      "narration_start_s": 62.4,
+      "stretched": false
+    }
+  ],
+  "end_card": {
+    "start_s": 70.0,
+    "duration_s": 3.0,
+    "frames": 72
+  },
+  "total_frames": 1752,
+  "total_s": 73.0,
+  "missing_narration": []
+}
