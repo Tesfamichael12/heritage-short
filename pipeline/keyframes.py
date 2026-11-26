@@ -24,7 +24,7 @@ from .common.retry import MissingKey, QuotaExhausted
 from .providers import cloudflare
 
 STAGE = "keyframes"
-VERSION = 1
+VERSION = 2  # 2: one-figure wording, after F6 (keyframes copied the sheet's two-figure layout)
 SEED_STEP = 1000  # a failed attempt retries with seed + 1000, + 2000 ...
 
 
@@ -53,7 +53,8 @@ def shot_prompt(board: dict[str, Any], shot: dict[str, Any]) -> str:
     characters = {c["id"]: c for c in board["characters"]}
     parts = [shot["keyframe"]["prompt"].strip().rstrip(".")]
     for index, ref in enumerate(shot["keyframe"].get("characters", [])):
-        parts.append(f"The person is the same person shown in image {index}: {characters[ref]['description'].strip()}")
+        parts.append(f"Exactly one person in the picture, the same woman as in image {index} (use it only for her face, hair and clothes, "
+                     f"not for the layout or pose): {characters[ref]['description'].strip()}")
     parts.append(_style(board))
     return ". ".join(parts)
 

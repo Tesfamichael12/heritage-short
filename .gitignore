@@ -23,3 +23,7 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
+
+# Rendered films are rebuilt by `make film` from the committed outputs; they are
+# uploaded with the submission rather than versioned here (about 30 MB per render).
+outputs/final/*.mp4

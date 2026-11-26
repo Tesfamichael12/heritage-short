@@ -49,3 +49,27 @@ The brief warned this might happen. We checked each provider's official document
 - **What it cost:** 14 minutes of waiting at the worst possible time, and no GPU quota, since no GPU was attached.
 - **Fix:** Both remote jobs now run a preflight before installing anything. It checks that `pypi.org` resolves and that `nvidia-smi` exists, and stops within seconds with a note saying which one is missing.
 - **Lesson:** "Complete" from Kaggle means only that the script ended. The remote job and the local report have to say what the session actually had.
+
+## F6. Keyframes copied the reference sheet's layout: two grandmothers in every shot
+
+- **When:** 26 November, about 18:58, the first keyframe run on storyboard v1.
+- **What broke:** The reference image was a character sheet with two views of the woman side by side (front and three-quarter), as the plan said. Every keyframe conditioned on it (s02 to s05) reproduced that layout: two copies of the same woman standing next to each other, in a flower field, at a doorway, at a table. The three shots with no character (s01, s07, s08) were fine. The images are kept in `outputs/experiments/F6_two_figure_layout/`.
+- **Cause:** FLUX.2 klein treats a reference image as a strong guide to composition, not only to identity. Our prompt said "the same person shown in image 0", which did nothing to stop it copying the pose and the count of figures.
+- **Fix:** Two changes, both in the storyboard or the prompt code: the reference is now a single full-length portrait of one woman, and every shot's prompt says "Exactly one person in the picture ... use it only for her face, hair and clothes, not for the layout or pose". The keyframe stage version went from 1 to 2 so every affected image was regenerated. All eight came back with one figure, recognisably the same woman.
+- **Lesson:** The standard advice is a turnaround sheet, but with an image-conditioned model the reference's composition leaks into every shot. A single-figure portrait suits this model better.
+
+## F7. Cloudflare's safety filter rejected harmless prompts
+
+- **When:** the same run.
+- **What broke:** Four requests came back `400 AiError: Your output has been flagged. Please choose another prompt / input image combination`: the reference sheet twice, and shots s02 and s03 once each. The prompts describe an old woman in a white dress and shawl picking flowers.
+- **Cause:** Unknown. The filter judges the generated output, not the prompt, and gives no reason.
+- **Fix:** None needed: the keyframe stage already retries with a new seed (seed + 1000 per attempt), and every image succeeded within three attempts. Each rejected attempt is in `runs.jsonl` with its error.
+- **Cost:** four extra calls, about 400 neurons of the 10,000 a day.
+
+## F8. The finished films missed the true-peak limit by 0.2 dB
+
+- **When:** 26 November, about 19:00, the first full render.
+- **What broke:** The quality check failed both films on `true_peak_db`: -0.8 dBTP measured, against a limit of -1.0. Loudness was right (-14.1 LUFS against -14).
+- **Cause:** The loudness pass hit -1.0 dBTP on the uncompressed mix. Encoding to AAC then pushed peaks slightly higher, which is a known property of lossy codecs. The earlier test on placeholder tones did not show it because pure tones have few sharp peaks; speech does.
+- **Fix:** The loudness pass now aims 1 dB below the limit (`AAC_HEADROOM_DB` in `pipeline/assemble.py`), and the quality check still measures the encoded file, so the limit is checked where it matters.
+- **Lesson:** Measure the delivered file, not the intermediate. The quality-check stage caught this; listening would not have.

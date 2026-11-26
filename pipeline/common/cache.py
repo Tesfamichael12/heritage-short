@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import unicodedata
 from datetime import datetime, timezone
@@ -76,6 +77,7 @@ class Manifest:
         self.store = store or config.STORE
         self.root = self.path.parent.parent
         self.entries: dict[str, dict[str, Any]] = {}
+        self.changed: set[str] = set()
         if self.path.exists():
             self.entries = json.loads(self.path.read_text(encoding="utf-8"))
 
@@ -101,6 +103,7 @@ class Manifest:
     def commit(self, path: Path | str, key: str, *, stage: str, shot: str | None = None) -> None:
         """Record a freshly generated file and keep a copy in the store."""
         file = self._abs(path)
+        self.changed.add(self._rel(path))
         self.entries[self._rel(path)] = {
             "key": key,
             "sha256": file_sha256(file),
@@ -125,8 +128,17 @@ class Manifest:
         return True
 
     def save(self) -> None:
+        """Write the manifest, keeping entries another process saved meanwhile.
+
+        The video and music stages run as separate processes for hours, so
+        each one only overwrites the entries it changed itself.
+        """
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        temp = self.path.with_suffix(".json.tmp")
+        if self.path.exists():
+            on_disk = json.loads(self.path.read_text(encoding="utf-8"))
+            on_disk.update({name: self.entries[name] for name in self.changed})
+            self.entries = on_disk
+        temp = self.path.with_suffix(f".json.{os.getpid()}.tmp")
         temp.write_text(
             json.dumps(self.entries, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
             encoding="utf-8",

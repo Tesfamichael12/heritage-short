@@ -17,7 +17,7 @@
     {
       "id": "emama",
       "description": "an Ethiopian grandmother in her sixties, slim, warm brown skin, kind lined face, grey hair in neat braids, wearing a long white cotton habesha dress and a white netela shawl with a thin green, yellow and red woven border, a small silver cross pendant",
-      "sheet_prompt": "character reference sheet of one woman, front view and three-quarter view side by side, plain cream background, full figure, even soft light",
+      "sheet_prompt": "a single full-length portrait of one woman standing alone, three-quarter view, face clearly visible, plain cream background, even soft light, only one figure",
       "seed": 11
     }
   ],
@@ -132,6 +132,10 @@
         "zoom_from": 1.0,
         "zoom_to": 1.08,
         "pan": "none"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.3
       }
     },
     {
@@ -159,6 +163,10 @@
         "zoom_from": 1.0,
         "zoom_to": 1.12,
         "pan": "none"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.3
       }
     },
     {
@@ -186,6 +194,10 @@
         "zoom_from": 1.05,
         "zoom_to": 1.15,
         "pan": "left"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.3
       }
     },
     {
@@ -213,6 +225,10 @@
         "zoom_from": 1.0,
         "zoom_to": 1.1,
         "pan": "none"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.68
       }
     },
     {
@@ -240,6 +256,10 @@
         "zoom_from": 1.0,
         "zoom_to": 1.1,
         "pan": "up"
+      },
+      "framing": {
+        "focus_x": 0.5,
+        "focus_y": 0.3
       }
     },
     {

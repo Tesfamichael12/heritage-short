@@ -36,6 +36,9 @@ from .common import cache, config, ffmpeg, runlog
 
 STAGE = "assemble"
 VERSION = 1
+# AAC encoding overshoots the true peak a little (measured -0.8 dBTP on a -1.0 target,
+# FAILURES.md F8), so the loudness pass aims this far below the limit.
+AAC_HEADROOM_DB = 1.0
 SEGMENTS = config.ROOT / ".cache" / "segments"
 AUDIO = config.ROOT / ".cache" / "audio"
 FINAL = config.OUTPUTS / "final"
@@ -335,7 +338,7 @@ def build_audio(board: dict[str, Any], timeline: dict[str, Any]) -> tuple[Path, 
     if music:
         key_inputs["music"] = music
     key = cache.make_key(STAGE, VERSION, {
-        "kind": "audio", "mix": mix_spec, "total": total,
+        "kind": "audio", "mix": mix_spec, "total": total, "aac_headroom_db": AAC_HEADROOM_DB,
         "starts": {sid: start for sid, _, start in lines}, "music_source": music_source,
     }, key_inputs)
     target, facts_path = AUDIO / f"{key}.wav", AUDIO / f"{key}.json"
@@ -384,7 +387,7 @@ def build_audio(board: dict[str, Any], timeline: dict[str, Any]) -> tuple[Path, 
 
     # Two-pass loudness: measure the mix, then apply one fixed correction.
     first = measure_loudness(premix)
-    target_i, target_tp = mix_spec["target_lufs"], mix_spec["true_peak_db"]
+    target_i, target_tp = mix_spec["target_lufs"], mix_spec["true_peak_db"] - AAC_HEADROOM_DB
     correction = (
         f"loudnorm=I={target_i}:TP={target_tp}:LRA=11:measured_I={first['input_i']}:measured_TP={first['input_tp']}"
         f":measured_LRA={first['input_lra']}:measured_thresh={first['input_thresh']}:offset={first['target_offset']}"

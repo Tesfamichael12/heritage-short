@@ -1,0 +1,26 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans,56,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,90,90,400,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.40,0:00:06.40,Default,,0,0,0,,Every September, the hills\Naround our village turn gold
+Dialogue: 0,0:00:06.40,0:00:08.62,Default,,0,0,0,,with Meskel flowers.
+Dialogue: 0,0:00:09.40,0:00:15.64,Default,,0,0,0,,Grandmother would rise at dawn\Nand climb the hill with her
+Dialogue: 0,0:00:15.64,0:00:16.41,Default,,0,0,0,,basket.
+Dialogue: 0,0:00:17.40,0:00:24.07,Default,,0,0,0,,She picked a handful, but she\Nalways set one flower apart.
+Dialogue: 0,0:00:25.40,0:00:29.96,Default,,0,0,0,,That one was for her son, who\Nhad left for Addis Ababa and
+Dialogue: 0,0:00:29.96,0:00:31.32,Default,,0,0,0,,rarely came home.
+Dialogue: 0,0:00:34.40,0:00:40.97,Default,,0,0,0,,She pressed it between the\Npages of her old Bible.
+Dialogue: 0,0:00:43.40,0:00:49.10,Default,,0,0,0,,When the Demera bonfire\Nburned, she prayed quietly for
+Dialogue: 0,0:00:49.10,0:00:49.53,Default,,0,0,0,,him.
+Dialogue: 0,0:00:52.40,0:00:57.98,Default,,0,0,0,,Years later, when we opened\Nthe book, we found thirty
+Dialogue: 0,0:00:57.98,0:00:59.69,Default,,0,0,0,,pressed flowers.
+Dialogue: 0,0:01:02.40,0:01:07.22,Default,,0,0,0,,She never forgot a single\NSeptember. Neither will we.

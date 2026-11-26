@@ -1,0 +1,162 @@
+{
+  "passed": false,
+  "failures": [
+    "score_is_generated_music",
+    "score_was_chosen"
+  ],
+  "films": {
+    "9x16": {
+      "file": "outputs/final/heritage_9x16.mp4",
+      "checks": {
+        "duration_s": {
+          "value": 73.0,
+          "pass": true,
+          "limit": "60 to 90"
+        },
+        "frame_size": {
+          "value": "1080x1920",
+          "pass": true,
+          "limit": "1080x1920"
+        },
+        "frame_rate": {
+          "value": "24/1",
+          "pass": true,
+          "limit": "24/1"
+        },
+        "video_codec": {
+          "value": "h264",
+          "pass": true,
+          "limit": "h264"
+        },
+        "audio_codec": {
+          "value": "aac",
+          "pass": true,
+          "limit": "aac"
+        },
+        "integrated_lufs": {
+          "value": -14.3,
+          "pass": true,
+          "limit": "-14 within 1.0"
+        },
+        "true_peak_db": {
+          "value": -1.8,
+          "pass": true,
+          "limit": "at most -1.0"
+        }
+      },
+      "bytes": 28485604
+    },
+    "16x9": {
+      "file": "outputs/final/heritage_16x9.mp4",
+      "checks": {
+        "duration_s": {
+          "value": 73.0,
+          "pass": true,
+          "limit": "60 to 90"
+        },
+        "frame_size": {
+          "value": "1920x1080",
+          "pass": true,
+          "limit": "1920x1080"
+        },
+        "frame_rate": {
+          "value": "24/1",
+          "pass": true,
+          "limit": "24/1"
+        },
+        "video_codec": {
+          "value": "h264",
+          "pass": true,
+          "limit": "h264"
+        },
+        "audio_codec": {
+          "value": "aac",
+          "pass": true,
+          "limit": "aac"
+        },
+        "integrated_lufs": {
+          "value": -14.3,
+          "pass": true,
+          "limit": "-14 within 1.0"
+        },
+        "true_peak_db": {
+          "value": -1.8,
+          "pass": true,
+          "limit": "at most -1.0"
+        }
+      },
+      "bytes": 29810874
+    }
+  },
+  "content": {
+    "shots": {
+      "value": 8,
+      "pass": true,
+      "limit": "8 to 12"
+    },
+    "every_shot_has_a_picture": {
+      "value": [],
+      "pass": true
+    },
+    "every_line_has_narration": {
+      "value": [],
+      "pass": true
+    },
+    "subtitle_cues": {
+      "value": 8,
+      "pass": true,
+      "limit": "at least 8 (one per spoken line)"
+    },
+    "score_is_generated_music": {
+      "value": "placeholder",
+      "pass": false
+    },
+    "score_was_chosen": {
+      "value": null,
+      "pass": false
+    },
+    "end_card_s": {
+      "value": 3.0,
+      "pass": true
+    }
+  },
+  "shots_with_generated_video": [],
+  "shots_with_pan_and_zoom": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08"
+  ],
+  "audio": {
+    "music_source": "placeholder",
+    "voice_lines": 8,
+    "voice_gain_db": {
+      "s01": 4.19,
+      "s02": 2.56,
+      "s03": 0.7,
+      "s04": 4.04,
+      "s05": 6.01,
+      "s06": 2.58,
+      "s07": 0.43,
+      "s08": -0.22
+    },
+    "music_gain_db": 3.65,
+    "premix_lufs": -16.73,
+    "premix_true_peak_db": 0.21,
+    "loudnorm_mode": "dynamic",
+    "loudnorm_output_lufs": -14.32,
+    "loudnorm_output_true_peak_db": -2.0,
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 300,
+      "release_ms": 1500
+    },
+    "reused": true
+  },
+  "timeline_total_s": 73.0
+}

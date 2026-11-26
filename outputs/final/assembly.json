@@ -1,0 +1,58 @@
+{
+  "outputs": {
+    "9x16": "outputs/final/heritage_9x16.mp4",
+    "16x9": "outputs/final/heritage_16x9.mp4"
+  },
+  "shot_sources": {
+    "s01": "kenburns",
+    "s02": "kenburns",
+    "s03": "kenburns",
+    "s04": "kenburns",
+    "s05": "kenburns",
+    "s06": "kenburns",
+    "s07": "kenburns",
+    "s08": "kenburns"
+  },
+  "clips_used": [],
+  "kenburns_used": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08"
+  ],
+  "missing_pictures": [],
+  "subtitle_cues": 8,
+  "audio": {
+    "music_source": "placeholder",
+    "voice_lines": 8,
+    "voice_gain_db": {
+      "s01": 4.19,
+      "s02": 2.56,
+      "s03": 0.7,
+      "s04": 4.04,
+      "s05": 6.01,
+      "s06": 2.58,
+      "s07": 0.43,
+      "s08": -0.22
+    },
+    "music_gain_db": 3.65,
+    "premix_lufs": -16.73,
+    "premix_true_peak_db": 0.21,
+    "loudnorm_mode": "dynamic",
+    "loudnorm_output_lufs": -14.32,
+    "loudnorm_output_true_peak_db": -2.0,
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 300,
+      "release_ms": 1500
+    },
+    "reused": true
+  },
+  "segments_reused": 8,
+  "segments_rendered": 10
+}
