@@ -1,0 +1,22 @@
+{
+  "experiment": "E12",
+  "still": "outputs/keyframes/s04.png",
+  "move": "zoom 1.00 to 1.10 over 120 frames, centred",
+  "measure": "frame-to-frame shift of a central patch by phase correlation, in output pixels",
+  "rows": [
+    {
+      "prescale": 1,
+      "frames": 120,
+      "centre_jitter_std_px": 0.304,
+      "max_step_px": 0.648,
+      "backward_steps": 31
+    },
+    {
+      "prescale": 3,
+      "frames": 120,
+      "centre_jitter_std_px": 0.08,
+      "max_step_px": 0.233,
+      "backward_steps": 0
+    }
+  ]
+}

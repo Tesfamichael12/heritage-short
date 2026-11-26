@@ -165,7 +165,7 @@ def preflight():
     except OSError as exc:
         RESULTS["notes"].append("no internet in this session (%s); is the Kaggle account phone-verified?" % exc)
         ok = False
-    if shutil.which("nvidia-smi") is None:
+    if SETTINGS.get("require_gpu", True) and shutil.which("nvidia-smi") is None:
         RESULTS["notes"].append("no GPU in this session (nvidia-smi missing); is the Kaggle account phone-verified and is GPU quota left?")
         ok = False
     RESULTS["environment"]["preflight_ok"] = ok

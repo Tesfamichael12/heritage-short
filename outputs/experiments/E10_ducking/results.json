@@ -1,0 +1,20 @@
+{
+  "experiment": "E10",
+  "music": "placeholder drone (the generated score was not ready)",
+  "voice_dbfs_mid_line": -19.42,
+  "rows": [
+    {
+      "attack_ms": 300,
+      "music_dbfs_first_300ms_of_lines": -34.49,
+      "music_dbfs_mid_line": -39.29,
+      "music_dbfs_in_pauses": -27.54
+    },
+    {
+      "attack_ms": 50,
+      "music_dbfs_first_300ms_of_lines": -36.06,
+      "music_dbfs_mid_line": -41.85,
+      "music_dbfs_in_pauses": -28.31
+    }
+  ],
+  "how_to_read": "Lower music level at line openings means the first syllable is less masked. The gap between mid-line and pause levels is the depth of the duck."
+}

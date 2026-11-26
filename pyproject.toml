@@ -13,6 +13,7 @@ dependencies = [
     "google-genai",
     "kaggle",
     "six>=1.17.0",
+    "numpy>=2.4.6",
 ]
 
 [dependency-groups]

@@ -208,7 +208,7 @@ def synthesize(
     key = config.env("GEMINI_API_KEY")
     if not key:
         raise MissingKey("GEMINI_API_KEY is not set in .env")
-    client = genai.Client(api_key=key, http_options={"api_version": "v1beta"})
+    client = genai.Client(api_key=key, http_options={"api_version": "v1beta", "timeout": 180_000})  # ms; see FAILURES.md F9
     prompt = speech_prompt(text, style_instruction)
     body = _speech_request(model, text, voice, style_instruction)
 

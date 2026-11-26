@@ -1,0 +1,57 @@
+{
+  "experiment": "E5",
+  "paraphrases": [
+    "soft watercolour-like painting with a grainy paper feel, warm golden morning light in the Ethiopian highlands, earthy yellows and greens",
+    "hand-painted illustration in gentle gouache, sunlit highland colours, ochre, olive and blue tones, simple shapes",
+    "storybook painting, matte paint texture, glowing highland sunlight, muted warm palette with soft blues"
+  ],
+  "stats": {
+    "fixed": {
+      "s01_fixed.png": {
+        "mean_saturation": 0.1892,
+        "mean_brightness": 0.7085,
+        "hue_std": 0.1389
+      },
+      "s07_fixed.png": {
+        "mean_saturation": 0.2267,
+        "mean_brightness": 0.7021,
+        "hue_std": 0.11
+      },
+      "s08_fixed.png": {
+        "mean_saturation": 0.2076,
+        "mean_brightness": 0.7599,
+        "hue_std": 0.1453
+      }
+    },
+    "paraphrased": {
+      "s01_paraphrased.png": {
+        "mean_saturation": 0.2342,
+        "mean_brightness": 0.7652,
+        "hue_std": 0.1144
+      },
+      "s07_paraphrased.png": {
+        "mean_saturation": 0.2473,
+        "mean_brightness": 0.7264,
+        "hue_std": 0.1528
+      },
+      "s08_paraphrased.png": {
+        "mean_saturation": 0.2163,
+        "mean_brightness": 0.5953,
+        "hue_std": 0.2407
+      }
+    }
+  },
+  "spread_across_three_shots": {
+    "fixed": {
+      "mean_saturation": 0.0153,
+      "mean_brightness": 0.0259,
+      "hue_std": 0.0154
+    },
+    "paraphrased": {
+      "mean_saturation": 0.0127,
+      "mean_brightness": 0.0727,
+      "hue_std": 0.0529
+    }
+  },
+  "how_to_read": "comparison.jpg: top row fixed style block, bottom row a different paraphrase per shot. A smaller spread means the three shots look more alike."
+}

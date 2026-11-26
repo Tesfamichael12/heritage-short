@@ -1,0 +1,20 @@
+{
+  "experiment": "E6",
+  "rows": [
+    {
+      "size": 1024,
+      "neurons": 104.2,
+      "vertical_crop_width": 576,
+      "upscale_to_1080": 1.88,
+      "edge_variance_at_1080x1920": 188.95
+    },
+    {
+      "size": 1440,
+      "neurons": 234.4,
+      "vertical_crop_width": 810,
+      "upscale_to_1080": 1.33,
+      "edge_variance_at_1080x1920": 658.56
+    }
+  ],
+  "note": "Edge variance is higher when the picture holds more fine detail after enlarging. Same prompt and seed."
+}

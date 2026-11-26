@@ -1,0 +1,26 @@
+{
+  "experiment": "E11",
+  "target_lufs": -14,
+  "true_peak_target": -2.0,
+  "two_pass_mode_reported": "dynamic",
+  "measured_with": "ffmpeg ebur128 (a different filter from loudnorm)",
+  "rows": {
+    "premix": {
+      "integrated_lufs": -18.0,
+      "true_peak_dbfs": 0.4,
+      "lra_lu": 15.1
+    },
+    "one_pass": {
+      "integrated_lufs": -16.0,
+      "true_peak_dbfs": -1.8,
+      "lra_lu": 9.0,
+      "error_from_target_lu": -2.0
+    },
+    "two_pass": {
+      "integrated_lufs": -15.7,
+      "true_peak_dbfs": -1.8,
+      "lra_lu": 7.9,
+      "error_from_target_lu": -1.7
+    }
+  }
+}

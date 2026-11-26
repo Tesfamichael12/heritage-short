@@ -1,0 +1,24 @@
+{
+  "experiment": "E1",
+  "model": "gemini-3.8-flash-lite-tts",
+  "voice": "Kore",
+  "single_take_s": 46.82,
+  "calls_single_take": 1,
+  "per_line_total_s": 50.63,
+  "calls_per_line": 8,
+  "per_line_chars_per_s": [
+    5.9,
+    5.92,
+    6.23,
+    7.05,
+    7.28,
+    5.61,
+    6.39,
+    6.78
+  ],
+  "per_line_rate_spread": 0.5562,
+  "listen": [
+    "outputs/experiments/E1_single_take/single_take.wav",
+    "outputs/narration/s01.wav ... s08.wav"
+  ]
+}

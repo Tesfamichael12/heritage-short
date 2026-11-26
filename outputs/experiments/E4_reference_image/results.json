@@ -1,0 +1,28 @@
+{
+  "experiment": "E4",
+  "same_prompt_and_seed": true,
+  "rows": [
+    {
+      "shot": "s02",
+      "with_reference": "outputs/experiments/E4_reference_image/s02_with_reference.png",
+      "without_reference": "outputs/experiments/E4_reference_image/s02_without_reference.png",
+      "neurons_with": 109.6,
+      "neurons_without": 104.2
+    },
+    {
+      "shot": "s04",
+      "with_reference": "outputs/experiments/E4_reference_image/s04_with_reference.png",
+      "without_reference": "outputs/experiments/E4_reference_image/s04_without_reference.png",
+      "neurons_with": 109.6,
+      "neurons_without": 104.2
+    },
+    {
+      "shot": "s06",
+      "with_reference": "outputs/experiments/E4_reference_image/s06_with_reference.png",
+      "without_reference": "outputs/experiments/E4_reference_image/s06_without_reference.png",
+      "neurons_with": 109.6,
+      "neurons_without": 104.2
+    }
+  ],
+  "how_to_read": "comparison.jpg: left column with the reference, right column without; one row per shot"
+}

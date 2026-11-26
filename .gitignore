@@ -27,3 +27,8 @@ __pycache__/
 # Rendered films are rebuilt by `make film` from the committed outputs; they are
 # uploaded with the submission rather than versioned here (about 30 MB per render).
 outputs/final/*.mp4
+
+# Derived audio from experiments E10 and E11: rebuilt by `python -m pipeline.experiments E10 E11`;
+# their measurements are kept in each results.json.
+outputs/experiments/E10_ducking/*.wav
+outputs/experiments/E11_loudness_passes/*.wav

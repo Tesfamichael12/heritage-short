@@ -73,3 +73,19 @@ The brief warned this might happen. We checked each provider's official document
 - **Cause:** The loudness pass hit -1.0 dBTP on the uncompressed mix. Encoding to AAC then pushed peaks slightly higher, which is a known property of lossy codecs. The earlier test on placeholder tones did not show it because pure tones have few sharp peaks; speech does.
 - **Fix:** The loudness pass now aims 1 dB below the limit (`AAC_HEADROOM_DB` in `pipeline/assemble.py`), and the quality check still measures the encoded file, so the limit is checked where it matters.
 - **Lesson:** Measure the delivered file, not the intermediate. The quality-check stage caught this; listening would not have.
+
+## F9. A speech request hung for 12 minutes with no reply and no error
+
+- **When:** 26 November, 20:31 to 20:43 EAT, experiment E2.
+- **What broke:** One call to `gemini-3.8-flash-lite-tts` (a single 7-second line) neither returned audio nor raised an error. The call before it, the 47-second single take for E1, had returned in 48 seconds.
+- **Cause:** Unknown on Google's side. On ours: the Interactions client was created with no timeout, so a stalled connection waited forever, and the retry helper never got the chance to retry.
+- **Fix:** The speech client now has a 180-second timeout (`http_options` in `pipeline/providers/gemini.py`). A timeout counts as retryable, so it would have been retried, paced to the per-minute limit.
+- **Side effect:** We stopped the process with a kill signal, so the attempt never reached `runs.jsonl`: the logging runs when a call ends, and this one never ended. A log that only writes on completion cannot record a hang. Writing a "started" line before each call would fix that; not done tonight.
+
+## F10. Kaggle never started the GPU jobs
+
+- **When:** 26 November, 18:47 to 20:32 EAT.
+- **What broke:** After the account was phone-verified, the video job (`heritage-shots-1126-1847-b1`, 3 shots) and the music job (`heritage-music-1126-1847`) were both accepted and stayed `queued` for 105 minutes. Our local waits timed out (90 minutes for music, about 105 for video). Neither job ever ran.
+- **Cause:** Not reported by Kaggle. The CLI returns only `queued`. Likely a shortage of free T4 sessions in the evening, or quota on a newly verified account not yet active.
+- **What we did:** Every shot in v1 uses the pan and zoom over its keyframe, which the pipeline was designed to fall back to. For the score, a music job on a Kaggle **CPU** session started at once (`MUSIC_DEVICE=cpu`, job `heritage-music-1126-2009-cpu`).
+- **Lesson:** On a free tier, a GPU is not a resource you can schedule. Planning video as an enhancement on top of a film that already works (the "progressive" design in ARCHITECTURE.md) is what let v1 ship without it.

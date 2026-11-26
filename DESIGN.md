@@ -6,32 +6,41 @@ Who the film is for, what it should leave them with, and what two rounds of test
 
 ## 1. Audience and intent
 
-*Pending. To be written and committed before any picture, clip or narration line of the film is generated.*
+**Version 1 (the fictional sample, "The Meskel Flowers").** Written by the AI assistant at the author's request and committed in `1b98b4e` at about 18:55 East Africa Time, before any picture or narration line was generated (the first `keyframes` line in `runs.jsonl` is after that commit). The author's real story replaces this section in version 2.
 
-- **Who will watch:**
-- **Where they will watch:** (device, app, sound on or off)
-- **The story in one sentence (logline):**
-- **What they should feel or understand when it ends:**
-- **The need, as a "how might we" sentence:**
-- **Why this story, and why now:**
+- **Who will watch:** Ethiopians aged about 20 to 40 who live away from their home town and their parents: students and young workers in Addis Ababa or abroad.
+- **Where they will watch:** on a phone, in a social feed, vertical, mostly with sound on but often in a noisy place, so every line is also subtitled.
+- **The story in one sentence (logline):** Every September a grandmother presses one Meskel flower for the son who left for the city; years later her family finds thirty of them.
+- **What they should feel or understand when it ends:** that a parent's love is often quiet and only becomes visible later, and the urge to call someone at home.
+- **The need, as a "how might we" sentence:** How might we make the people who left home feel the patience of the people who stayed, in about a minute, without a single line of dialogue?
+- **Why this story, and why now:** Meskel falls in late September, and the yellow adey abeba is the flower every Ethiopian connects with it, so the image carries meaning before the narration explains anything. For the sample it also tests the hard parts of the pipeline: one recurring character across shots, a single object that has to read clearly, and a night scene.
 
 ## 2. Ideas considered
 
-*Pending.* Design thinking asks for several approaches before choosing one. At least two other ways of telling this story, and why this one was chosen.
+For version 1, by the assistant. Design thinking asks for several approaches before choosing one.
 
 | Approach | What it would look like | Why it was or was not chosen |
 | --- | --- | --- |
-|  |  |  |
+| The son's point of view | He receives a dried flower in a letter in Addis Ababa every year | Needs a second consistent character and city scenes; doubles the consistency problem. Not chosen. |
+| The festival itself | A documentary-style film of Meskel and the Demera bonfire | Informative but impersonal; no single feeling for the audience to leave with. Not chosen. |
+| One ritual, one object, one reveal | The grandmother's yearly habit, ending on the Bible full of flowers | One character, one place, and an ending the viewer can feel without explanation. **Chosen.** |
 
 ## 3. Why each shot exists
 
 Every shot's reason is in `storyboard.json` (`shots[].reason`), and the schema refuses a storyboard that lacks one. The table below is copied from there when the storyboard is locked, with the shot size chosen for each and why.
 
-*Pending.*
+Version 1, copied from `storyboard.json`:
 
 | Shot | Size | Reason |
 | --- | --- | --- |
-|  |  |  |
+| s01 | extreme wide | Sets the place and the season before any person appears, so the flowers mean something when she picks them. |
+| s02 | wide | Introduces her through a habit, not a face: the yearly walk is the ritual the whole film rests on. |
+| s03 | close | The detail that turns a festival custom into a private one; the audience must see the single flower. |
+| s04 | medium | Answers the mystery and names the absence the film is about. |
+| s05 | insert | Shows where the love is stored, and plants the object the ending pays off. |
+| s06 | wide | The public festival and her private prayer in one image; the emotional peak before the time jump. |
+| s07 | insert | The payoff: the count makes years of silent love visible at once. |
+| s08 | extreme wide | Returns to the hill without her, so the ending lands as memory and a promise. |
 
 ## 4. Test 1: the radio cut
 

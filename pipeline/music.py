@@ -11,6 +11,7 @@ a generated placeholder drone, and the quality check says so.
 from __future__ import annotations
 
 import shutil
+import os
 import time
 from pathlib import Path
 from typing import Any
@@ -36,6 +37,12 @@ def candidate_key(board: dict[str, Any], seed: int) -> str:
     })
 
 
+def use_gpu() -> bool:
+    """MUSIC_DEVICE=cpu runs the job on a Kaggle CPU session, which starts at once
+    when every free GPU is taken (FAILURES.md F9). Slower, but it runs."""
+    return os.environ.get("MUSIC_DEVICE", "gpu") != "cpu"
+
+
 def build_job(board: dict[str, Any], seeds: list[int], name: str) -> dict[str, Any]:
     music = board["music"]
     return {
@@ -44,7 +51,8 @@ def build_job(board: dict[str, Any], seeds: list[int], name: str) -> dict[str, A
             "caption": music["caption"], "bpm": music["bpm"], "keyscale": music["keyscale"],
             "duration_s": music["duration_s"], "instrumental": music["instrumental"], "seeds": seeds,
         },
-        "settings": {"config_path": music["model"], "inference_steps": INFERENCE_STEPS, "time_budget_min": 50},
+        "settings": {"config_path": music["model"], "inference_steps": INFERENCE_STEPS,
+                     "time_budget_min": 50 if use_gpu() else 110, "require_gpu": use_gpu()},
     }
 
 
@@ -95,11 +103,12 @@ def run(board: dict[str, Any], manifest: cache.Manifest | None = None,
         pending = []
 
     if pending:
-        slug = f"heritage-music-{time.strftime('%m%d-%H%M')}"
+        slug = f"heritage-music-{time.strftime('%m%d-%H%M')}" + ("" if use_gpu() else "-cpu")
         dest = config.JOBS / slug / "out"
         print(f"  {len(pending)} score candidate(s) to make in one Kaggle job")
         try:
-            outcome = kaggle.run(slug, "music_job.py", build_job(board, pending, slug), dest, timeout_s=90 * 60)
+            outcome = kaggle.run(slug, "music_job.py", build_job(board, pending, slug), dest,
+                                 gpu=use_gpu(), timeout_s=(90 if use_gpu() else 150) * 60)
         except Exception as exc:
             outcome = {"ref": slug, "status": "push_failed", "wall_s": 0, "results": {"notes": [str(exc)[:400]]}}
         log_job(outcome, board)
