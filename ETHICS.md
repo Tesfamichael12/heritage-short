@@ -22,9 +22,9 @@ To be completed by the author before generation starts.
 
 | Item | Record |
 | --- | --- |
-| Whose story the film tells | The author's own: a memory of playing street football in Dessie at the age of seven, and of his grandmother's explanation of the town's name |
-| Relationship to the author | It is about the author himself; his grandmother and three childhood friends (Seid, Dawit, Hayat) appear in it |
-| Who gave consent | The author, for his own story, by writing it and asking for it to be filmed (26 November 2026) |
+| Whose story the film tells | The author's own: a memory of playing street football in Dessie at the age of seven, and of the author's grandmother's explanation of the town's name |
+| Relationship to the author | It is about the author; the author's grandmother and three childhood friends (Seid, Dawit, Hayat) appear in it |
+| Who gave consent | The author, for their own story, by writing it and asking for it to be filmed (26 November 2026) |
 | What is shown of the other people | Illustrated figures drawn from words only; no photograph, recording or likeness of any real person was used. The grandmother has no name in the film. The friends appear by first name only, in the narration of one line (Hayat) and the subtitles of another (Dawit) |
 | Consent from the grandmother and the three friends | **Not recorded.** The author should confirm with them (or with family for the grandmother) or replace the friends' first names before the film is published. Changing a name is one edit to `storyboard.json` and regenerates only that shot's line |
 | Names or details left out | Surnames, the exact neighbourhood (sefer), and any detail that would identify the family's home |

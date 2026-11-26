@@ -8,9 +8,9 @@ The film is 60 to 90 seconds long, in vertical (9:16) and horizontal (16:9), wit
 make film
 ```
 
-> **Status, 26 November 2026, 21:00 EAT.** Version 1 is a complete 73-second film, *The Meskel Flowers* (የመስቀል አበቦች): eight illustrated shots, Amharic narration, English subtitles, both formats, passing every quality check except the score (see below). **Version 1 is a fictional sample story written with AI**, made to prove the pipeline end to end; it is labelled as fiction in [story/brief.md](story/brief.md), [ETHICS.md](ETHICS.md) and on its end card. The author's real family story replaces it in version 2.
+> **The film: *The Comet of Dessie* (የደሴ ኮሜት), about 83 seconds.** A true childhood memory: at seven, the author built a football out of socks and string in Dessie, kicked it into the fog in a 4–4 match, and never found it. Eight illustrated shots, Amharic narration, English subtitles, a generated score, both formats. Every shot is a slow pan and zoom over its keyframe: Kaggle never started the GPU job for video ([FAILURES.md](FAILURES.md) F10), and the pipeline was built to fall back to this.
 >
-> What is not there yet, and why: Kaggle never started the GPU jobs tonight ([FAILURES.md](FAILURES.md) F10), so every shot is a slow pan and zoom over its keyframe instead of a generated clip, and the score was being generated on a CPU session instead.
+> Version 1 was a fictional sample written with AI to prove the pipeline end to end (*The Meskel Flowers*); its files are kept in `outputs/experiments/v1_sample_film/` and its experiments in [EXPERIMENTS.md](EXPERIMENTS.md).
 
 ## Run it
 

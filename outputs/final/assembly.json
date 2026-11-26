@@ -25,25 +25,25 @@
     "s08"
   ],
   "missing_pictures": [],
-  "subtitle_cues": 8,
+  "subtitle_cues": 13,
   "audio": {
     "music_source": "chosen",
     "voice_lines": 8,
     "voice_gain_db": {
-      "s01": 4.19,
-      "s02": 2.56,
-      "s03": 0.7,
-      "s04": 4.04,
-      "s05": 6.01,
-      "s06": 2.58,
-      "s07": 0.43,
-      "s08": -0.22
+      "s01": -1.84,
+      "s02": 0.2,
+      "s03": -1.05,
+      "s04": 0.88,
+      "s05": -0.78,
+      "s06": -2.59,
+      "s07": 3.3,
+      "s08": -2.09
     },
     "music_gain_db": -3.55,
-    "premix_lufs": -16.43,
-    "premix_true_peak_db": 0.22,
+    "premix_lufs": -16.52,
+    "premix_true_peak_db": -1.47,
     "loudnorm_mode": "dynamic",
-    "loudnorm_output_lufs": -14.25,
+    "loudnorm_output_lufs": -14.09,
     "loudnorm_output_true_peak_db": -2.0,
     "duck": {
       "threshold": 0.02,
@@ -53,6 +53,6 @@
     },
     "reused": false
   },
-  "segments_reused": 16,
-  "segments_rendered": 2
+  "segments_reused": 0,
+  "segments_rendered": 18
 }

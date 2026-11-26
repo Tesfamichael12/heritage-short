@@ -11,16 +11,19 @@ Style: Default,Noto Sans,56,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,-1,0,0,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.40,0:00:06.40,Default,,0,0,0,,Every September, the hills\Naround our village turn gold
-Dialogue: 0,0:00:06.40,0:00:08.62,Default,,0,0,0,,with Meskel flowers.
-Dialogue: 0,0:00:09.40,0:00:15.64,Default,,0,0,0,,Grandmother would rise at dawn\Nand climb the hill with her
-Dialogue: 0,0:00:15.64,0:00:16.41,Default,,0,0,0,,basket.
-Dialogue: 0,0:00:17.40,0:00:24.07,Default,,0,0,0,,She picked a handful, but she\Nalways set one flower apart.
-Dialogue: 0,0:00:25.40,0:00:29.96,Default,,0,0,0,,That one was for her son, who\Nhad left for Addis Ababa and
-Dialogue: 0,0:00:29.96,0:00:31.32,Default,,0,0,0,,rarely came home.
-Dialogue: 0,0:00:34.40,0:00:40.97,Default,,0,0,0,,She pressed it between the\Npages of her old Bible.
-Dialogue: 0,0:00:43.40,0:00:49.10,Default,,0,0,0,,When the Demera bonfire\Nburned, she prayed quietly for
-Dialogue: 0,0:00:49.10,0:00:49.53,Default,,0,0,0,,him.
-Dialogue: 0,0:00:52.40,0:00:57.98,Default,,0,0,0,,Years later, when we opened\Nthe book, we found thirty
-Dialogue: 0,0:00:57.98,0:00:59.69,Default,,0,0,0,,pressed flowers.
-Dialogue: 0,0:01:02.40,0:01:07.22,Default,,0,0,0,,She never forgot a single\NSeptember. Neither will we.
+Dialogue: 0,0:00:00.40,0:00:05.69,Default,,0,0,0,,Grandmother said an emperor\Ncamped under Mount Tossa saw a
+Dialogue: 0,0:00:05.69,0:00:09.49,Default,,0,0,0,,comet, and named the\Nplace Dessie: my joy.
+Dialogue: 0,0:00:10.40,0:00:17.15,Default,,0,0,0,,At seven, I made a comet of my\Nown: old socks, plastic bags
+Dialogue: 0,0:00:17.15,0:00:18.43,Default,,0,0,0,,and string.
+Dialogue: 0,0:00:19.40,0:00:24.10,Default,,0,0,0,,Nothing in Dessie is flat.\NEven our football pitch
+Dialogue: 0,0:00:24.10,0:00:26.12,Default,,0,0,0,,climbed the mountain.
+Dialogue: 0,0:00:27.40,0:00:32.66,Default,,0,0,0,,Our rule: kick it in the\Nditch, you climb in after it.
+Dialogue: 0,0:00:32.66,0:00:37.43,Default,,0,0,0,,Hayat's left foot is the\Nreason that rule exists.
+Dialogue: 0,0:00:38.19,0:00:45.22,Default,,0,0,0,,Four–four. Next goal wins.\NThen the fog came down from
+Dialogue: 0,0:00:45.22,0:00:48.40,Default,,0,0,0,,Tossa like a white gabi.
+Dialogue: 0,0:00:49.19,0:00:54.48,Default,,0,0,0,,I couldn't see anything but my\Ncomet. I kicked it with all I
+Dialogue: 0,0:00:54.48,0:00:59.13,Default,,0,0,0,,had. It vanished into the\Nfog. “GOAL!” shouted Dawit.
+Dialogue: 0,0:00:59.90,0:01:05.68,Default,,0,0,0,,Grandmother laughed and pulled\Nme under her gabi: “A comet
+Dialogue: 0,0:01:05.68,0:01:10.74,Default,,0,0,0,,doesn't stay. It only shows\Nyou where your joy is.”
+Dialogue: 0,0:01:11.53,0:01:15.87,Default,,0,0,0,,Today, when people ask where\NI'm from, I say Dessie. And
+Dialogue: 0,0:01:15.87,0:01:18.24,Default,,0,0,0,,then I tell them\Nwhat it means.

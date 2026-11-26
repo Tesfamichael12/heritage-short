@@ -1,65 +1,65 @@
 {
   "outputs/keyframes/s01.png": {
-    "bytes": 1804267,
-    "created": "2026-11-26T15:45:20+00:00",
-    "key": "561aa69bc3d38596379a38bfbbbabda9571daf99162d5f9fe37ec0786663e6c3",
-    "sha256": "36fa5eae6ddc38f177d38067ad44613d2ebe7259279ec29936325cd73e444350",
+    "bytes": 1954661,
+    "created": "2026-11-26T19:40:55+00:00",
+    "key": "aec1127f0091c5fb15b28331b4b136fd77d23109a507ba679a8afd1459775d4e",
+    "sha256": "1c229532719b7c599a09860dd3257cfceba614d0dc98279fcaa496e6681cf1f5",
     "shot": "s01",
     "stage": "keyframes"
   },
   "outputs/keyframes/s02.png": {
-    "bytes": 1917222,
-    "created": "2026-11-26T15:45:31+00:00",
-    "key": "6f2f9a9a15a6e2a4e65622f79e61b4849d58307e39567f7266d6edf83df29d48",
-    "sha256": "f1c5f2c648be74d2535f25fd970033ef2bfb9c893587a58c911b8c2ce4cf01c9",
+    "bytes": 1940361,
+    "created": "2026-11-26T19:41:16+00:00",
+    "key": "0f44d070cedfbd59a07f6e3f00bb71e0bfde2beb4d435177a86e1668c3ae7c84",
+    "sha256": "11ab2351071b6a0a73bb7a2fccf4ee447b0a784e4af490c4ab363e16ebc7d4e8",
     "shot": "s02",
     "stage": "keyframes"
   },
   "outputs/keyframes/s03.png": {
-    "bytes": 1604278,
-    "created": "2026-11-26T15:45:43+00:00",
-    "key": "90cd918eea8e993531fe3964c7dbcccb2abf913cc9dddf34799d407e24e48dba",
-    "sha256": "ba8858d7bebdd7fe78cd6a94671d3b9d951a13b1b1d79695903e5605d3546e40",
+    "bytes": 2014855,
+    "created": "2026-11-26T19:41:39+00:00",
+    "key": "059488db66929c614e582734ffd86258058480a4401a54c24c3a2d39e5a8701e",
+    "sha256": "b12f40924c6a40ced70ca290fe081a2d013a6acd75c344aacc951a003977425b",
     "shot": "s03",
     "stage": "keyframes"
   },
   "outputs/keyframes/s04.png": {
-    "bytes": 1909813,
-    "created": "2026-11-26T15:45:53+00:00",
-    "key": "ca4671435d597e896ce6f13fa379ccf60e49e619fb9140106de3e5782eb2d6c1",
-    "sha256": "ead4a03c51f7d4dd1cea991da441d36fec592a02514159a201a0e85d0ed49cf9",
+    "bytes": 1724874,
+    "created": "2026-11-26T19:41:59+00:00",
+    "key": "86cfb6c9fc76a4b5b4a221afdbb105ef11afd483490312052bd52cf1dc16e6f9",
+    "sha256": "7125f9d14d1e6f8ec6602b7058e8d556d7b73b54238d274f483dccd97a0311bf",
     "shot": "s04",
     "stage": "keyframes"
   },
   "outputs/keyframes/s05.png": {
-    "bytes": 1446243,
-    "created": "2026-11-26T15:46:06+00:00",
-    "key": "2731918cefa8b7089fcba567df8bb4f4382daa02eafc4b67d9381f43fa297836",
-    "sha256": "54e23a7d520c0576f2cffe8895efe9dcd1b51938d330674b5e5a73972ee58b39",
+    "bytes": 1574984,
+    "created": "2026-11-26T19:44:48+00:00",
+    "key": "2a870c14c0853c830eb2708cd61c82ab9c2ff4ca6fa10e4182d1a9ccb4cd5273",
+    "sha256": "3a1eb6f4fd8c2a2567ae13419e2f3eb50f057975e322e2ff38014898a7789c92",
     "shot": "s05",
     "stage": "keyframes"
   },
   "outputs/keyframes/s06.png": {
-    "bytes": 1887375,
-    "created": "2026-11-26T15:46:16+00:00",
-    "key": "73065d8c7a45af47e2f8ce1c6bc8d7c6c199abc1682e028e82a2efd283a48c86",
-    "sha256": "4c698e72214f6c42663d62b457d67ef387f841e369600804b8a663ca47d03dc5",
+    "bytes": 1567911,
+    "created": "2026-11-26T19:45:09+00:00",
+    "key": "617cf41c5c7f9a2204d137126a2d1af15a4413f6fb74602754de24243f2f9201",
+    "sha256": "eb1f1e828d3c1b8d33e163c1cfebd210441a56a2a40fbbc0eb007da819e82eee",
     "shot": "s06",
     "stage": "keyframes"
   },
   "outputs/keyframes/s07.png": {
-    "bytes": 1929499,
-    "created": "2026-11-26T15:46:26+00:00",
-    "key": "5ef9d28bd2cf705c3d85a4befad8992111d9011824efdb10679fb6a68cd6de46",
-    "sha256": "cdfadf6abc8d138039ba32d46853300be4059755d4f99a1d0aeba6e74b73cbc3",
+    "bytes": 1886966,
+    "created": "2026-11-26T19:45:34+00:00",
+    "key": "fe36aab76c06a404e1fe7953e08840e50fdbc6fdcc4e29d43bfe2786f9b12125",
+    "sha256": "2f902e8840748e36f90f1015dc5f1c318955bb8522bbef8902f9cb503510568f",
     "shot": "s07",
     "stage": "keyframes"
   },
   "outputs/keyframes/s08.png": {
-    "bytes": 1580743,
-    "created": "2026-11-26T15:46:39+00:00",
-    "key": "a3340c2641b3be47d51f88bdd489ad5eafb3d1661870575288c31cac3f323d54",
-    "sha256": "5d1bd60ae8cbe72db3f246e73f4716b97104f7720a3c0e5095ba47a82087724e",
+    "bytes": 1882723,
+    "created": "2026-11-26T19:45:55+00:00",
+    "key": "9fe9218f99c879d8ae9c099eef0da10ade61490598107d9c9c74e0bd3faf7c78",
+    "sha256": "a827799be0a9969ce7c3195e08958da1cb1d58e79e67885c1264c98eff508976",
     "shot": "s08",
     "stage": "keyframes"
   },
@@ -88,68 +88,76 @@
     "stage": "music"
   },
   "outputs/narration/s01.wav": {
-    "bytes": 390268,
-    "created": "2026-11-26T15:47:23+00:00",
-    "key": "b7f548168765c75cc4aa96125bdecff487b2996994b77a418854ae011f8272d8",
-    "sha256": "23bd3521bcf456205a8848704dea9d298bd01b9bf1ae5891d37f06ea5158d9a2",
+    "bytes": 432028,
+    "created": "2026-11-26T19:40:06+00:00",
+    "key": "89082a14cd69a1e7d8f1390595b4a995ddb20dc73f20319afbad55612e406fe3",
+    "sha256": "1e11a26712d5a6a2495d3f0132e01360ef35dcc9eb6fe2c9c3f748ea8bb7ede5",
     "shot": "s01",
     "stage": "narration"
   },
   "outputs/narration/s02.wav": {
-    "bytes": 332188,
-    "created": "2026-11-26T15:47:43+00:00",
-    "key": "42c13b79e52f44df3d71f59e82fee74b19bc3810b5a899a77cb832b3ecd18899",
-    "sha256": "0b4eede84c5b84cc070327aca29de7da189d483488b49fc7dc8a4c2b38ed92d5",
+    "bytes": 381148,
+    "created": "2026-11-26T19:40:30+00:00",
+    "key": "9a10d059d2eca1ffd07fda72c4c11cc96aa9f9b8ca2cb57a3a54e2a65e9bd9a3",
+    "sha256": "4f0433aad9ce17d991a54e07e3d0c5c1507229099ceb554d844e18fa675afd78",
     "shot": "s02",
     "stage": "narration"
   },
   "outputs/narration/s03.wav": {
-    "bytes": 315868,
-    "created": "2026-11-26T15:48:05+00:00",
-    "key": "6038627e730426c015065a41f3c54b393876fef69fd8b7899a92725d09c1162d",
-    "sha256": "7551a75937663ffb18561ce58abd19f82422adb4cb5569ccad7a763115d8ce29",
+    "bytes": 318268,
+    "created": "2026-11-26T19:40:48+00:00",
+    "key": "31b7b4dd1366556356d26be34e7cf806c58641b02fae7070b0ad515d0f7294ac",
+    "sha256": "a09fc954a61c91900d3ea59ab45605929ca1ef5accf6d2b71b99b2a84d1c963e",
     "shot": "s03",
     "stage": "narration"
   },
   "outputs/narration/s04.wav": {
-    "bytes": 279868,
-    "created": "2026-11-26T15:48:25+00:00",
-    "key": "9ccf475edc3789f78746f35fa84511cf6932b43bf4f6c5ed73c7edc563fb0ed4",
-    "sha256": "d5fcc7138968384b8c5b380fef2bf9e32bbf9a183569e103ee74bf3c158eb764",
+    "bytes": 477148,
+    "created": "2026-11-26T19:41:18+00:00",
+    "key": "6f820f393fb22c99ff0edfefe9e0de2d00cbfb5ba90449238cc9689be2007980",
+    "sha256": "922c2036046ad28191023727ce0be079a680d5121f2ad723ac942054d5781844",
     "shot": "s04",
     "stage": "narration"
   },
   "outputs/narration/s05.wav": {
-    "bytes": 311068,
-    "created": "2026-11-26T15:48:46+00:00",
-    "key": "b5750da4b1fd503ae040cb200ae5f183dce5fde2a673d5ad4bfd52dab82e615e",
-    "sha256": "ba23fab0180ee35ecb8c6f947ba78d1b52e9751832f4f3e2d936e7159977b4f3",
+    "bytes": 485788,
+    "created": "2026-11-26T19:41:32+00:00",
+    "key": "dcf04c57d271b21e8adf1361bf546702c9237447e361cb5b356ece06999c11a9",
+    "sha256": "7bc91e33e56eebde4c3566d5758abc85605b4e567989b429c27687d33b6a486d",
     "shot": "s05",
     "stage": "narration"
   },
   "outputs/narration/s06.wav": {
-    "bytes": 289948,
-    "created": "2026-11-26T15:49:07+00:00",
-    "key": "dbd612b34ae3011fa910ad38ab4e76c77cc26d54089e9dd6d20fa870e3f879af",
-    "sha256": "cc235d75cb5f0d82ddbc5892372f582995293bade27f5c1314013d5000f012f2",
+    "bytes": 472828,
+    "created": "2026-11-26T19:41:51+00:00",
+    "key": "098bff81854729d3fbe63683511fce55c26f36df45ee515a29b92a7c2072a310",
+    "sha256": "05c223750f8c8ef378aef44b89149f6f6db1b86034b13e1641e641ea1f61356c",
     "shot": "s06",
     "stage": "narration"
   },
   "outputs/narration/s07.wav": {
-    "bytes": 345628,
-    "created": "2026-11-26T15:49:29+00:00",
-    "key": "86c7d0f0dc2ac9b0f5bd135849e122a66e4b4c898e94fcef9ee54c4b12179b1a",
-    "sha256": "994b824404a6f624837dba422b2a41667991b33db8a8a1673fc540162b5ed2ba",
+    "bytes": 516028,
+    "created": "2026-11-26T19:42:12+00:00",
+    "key": "cd1945631f9cc9c39e21bec7d5850f041d49ec9fbb0658d3bad30d2ffe5e6c60",
+    "sha256": "85d4a6c9e77627ede9161f0ea8f38c44364ca68aa88daf86313caa9a0c3be132",
     "shot": "s07",
     "stage": "narration"
   },
   "outputs/narration/s08.wav": {
-    "bytes": 227068,
-    "created": "2026-11-26T15:49:48+00:00",
-    "key": "f592f41dbe348968c734f93899958850f515c19b28abffd85cf345797bfbefcb",
-    "sha256": "1ef201cc25a2d6e1a443fc5e447128e73cb8ecc8061e973d0347dbbb6b133dec",
+    "bytes": 317788,
+    "created": "2026-11-26T19:42:31+00:00",
+    "key": "bd0e0af2ba88c18d866920d0e77d570d32e5ff6763155263b286778a58fd4c57",
+    "sha256": "e25acba25d6dd1663cb10112de314a7a50003e60632bb8588ec9b939a3fa28f5",
     "shot": "s08",
     "stage": "narration"
+  },
+  "outputs/refs/boy.png": {
+    "bytes": 1264796,
+    "created": "2026-11-26T19:40:13+00:00",
+    "key": "246d12c8923fb2cc1d2be998e1f0d9c0bea78b31b4da68ad9ec2077a97cc6b64",
+    "sha256": "c32e8c964afb0a7a61e4087e437f6a3b340d010d3a772439f5e5b7e9798c5172",
+    "shot": "ref:boy",
+    "stage": "refs"
   },
   "outputs/refs/emama.png": {
     "bytes": 1277556,
@@ -157,6 +165,14 @@
     "key": "fde186fd26e5d6eac8e16efeb10159f1ae26e303ba97c5860c3641556dc91267",
     "sha256": "463b7309c623acff46db4a966998a4078bacc5205c8a6ff6bfcd58ea93a0f75f",
     "shot": "ref:emama",
+    "stage": "refs"
+  },
+  "outputs/refs/grandmother.png": {
+    "bytes": 904310,
+    "created": "2026-11-26T19:40:35+00:00",
+    "key": "f2428a6a6a97326334a654fc13dbd785e27e37aec475c787dcd907064d1bc4ab",
+    "sha256": "162db4da57db9e4a407721afefccfad5b39606922c9e669a3bdfea24fc9f3f97",
+    "shot": "ref:grandmother",
     "stage": "refs"
   }
 }

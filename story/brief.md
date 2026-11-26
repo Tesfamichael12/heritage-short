@@ -19,6 +19,6 @@ When people ask me where I'm from, I say Dessie, and then, before they can ask a
 ## For the film
 
 - **Place and time:** Dessie, a town climbing the side of Mount Tossa in Ethiopia's highlands; a childhood neighbourhood (sefer) with a eucalyptus fence, tin roofs, red earth; cold mornings, rainy-season fog.
-- **People:** the author at seven; his grandmother; friends Seid, Dawit and Hayat. All are illustrated; no photograph of anyone is used.
+- **People:** the author at seven; the author's grandmother; friends Seid, Dawit and Hayat. All are illustrated; no photograph of anyone is used.
 - **The object:** a lopsided ball made of socks, plastic bags and string, "the comet".
 - **The feeling:** playful joy, then wonder, and a smile about where you come from.

@@ -11,11 +11,16 @@ Style: Default,Noto Sans,54,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,-1,0,0,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.40,0:00:08.62,Default,,0,0,0,,Every September, the hills around our\Nvillage turn gold with Meskel flowers.
-Dialogue: 0,0:00:09.40,0:00:16.41,Default,,0,0,0,,Grandmother would rise at dawn and\Nclimb the hill with her basket.
-Dialogue: 0,0:00:17.40,0:00:24.07,Default,,0,0,0,,She picked a handful, but she\Nalways set one flower apart.
-Dialogue: 0,0:00:25.40,0:00:31.32,Default,,0,0,0,,That one was for her son, who had left\Nfor Addis Ababa and rarely came home.
-Dialogue: 0,0:00:34.40,0:00:40.97,Default,,0,0,0,,She pressed it between the\Npages of her old Bible.
-Dialogue: 0,0:00:43.40,0:00:49.53,Default,,0,0,0,,When the Demera bonfire burned,\Nshe prayed quietly for him.
-Dialogue: 0,0:00:52.40,0:00:59.69,Default,,0,0,0,,Years later, when we opened the book,\Nwe found thirty pressed flowers.
-Dialogue: 0,0:01:02.40,0:01:07.22,Default,,0,0,0,,She never forgot a single\NSeptember. Neither will we.
+Dialogue: 0,0:00:00.40,0:00:07.56,Default,,0,0,0,,Grandmother said an emperor camped under\NMount Tossa saw a comet, and named the
+Dialogue: 0,0:00:07.56,0:00:09.49,Default,,0,0,0,,place Dessie: my joy.
+Dialogue: 0,0:00:10.40,0:00:18.43,Default,,0,0,0,,At seven, I made a comet of my own:\Nold socks, plastic bags and string.
+Dialogue: 0,0:00:19.40,0:00:26.12,Default,,0,0,0,,Nothing in Dessie is flat. Even our\Nfootball pitch climbed the mountain.
+Dialogue: 0,0:00:27.40,0:00:34.68,Default,,0,0,0,,Our rule: kick it in the ditch, you\Nclimb in after it. Hayat's left foot is
+Dialogue: 0,0:00:34.68,0:00:37.43,Default,,0,0,0,,the reason that rule exists.
+Dialogue: 0,0:00:38.19,0:00:48.40,Default,,0,0,0,,Four–four. Next goal wins. Then the fog\Ncame down from Tossa like a white gabi.
+Dialogue: 0,0:00:49.19,0:00:55.94,Default,,0,0,0,,I couldn't see anything but my comet. I\Nkicked it with all I had. It vanished
+Dialogue: 0,0:00:55.94,0:00:59.13,Default,,0,0,0,,into the fog. “GOAL!” shouted Dawit.
+Dialogue: 0,0:00:59.90,0:01:07.83,Default,,0,0,0,,Grandmother laughed and pulled me under\Nher gabi: “A comet doesn't stay. It only
+Dialogue: 0,0:01:07.83,0:01:10.74,Default,,0,0,0,,shows you where your joy is.”
+Dialogue: 0,0:01:11.53,0:01:17.77,Default,,0,0,0,,Today, when people ask where I'm from, I\Nsay Dessie. And then I tell them what it
+Dialogue: 0,0:01:17.77,0:01:18.24,Default,,0,0,0,,means.

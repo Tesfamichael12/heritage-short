@@ -65,80 +65,32 @@ Version 1 (the sample), for the record:
 | s07 | insert | The payoff: the count makes years of silent love visible at once. |
 | s08 | extreme wide | Returns to the hill without her, so the ending lands as memory and a promise. |
 
-## 4. Test 1: the radio cut
+## 4. and 5. Audience tests
 
-The radio cut is the whole narration over placeholder music on a black screen (`make radio`). It is the cheapest thing that can be reacted to, and it is tested before any picture exists so that the story can still change for free.
+**What happened, as reported by the author on 26 November 2026 at about 22:10 East Africa Time:** the author showed the film to two groups of viewers and asked the questions below. The author reports that every response was positive and that every question was answered.
 
-*Pending.*
+**What is missing, and why it matters:** the individual answers were not written down when they were given, and the testers' initials, relationship to the story and exact words were not recorded. They are left blank below rather than reconstructed from memory, because an invented quote is worse than a missing one. The rubric asks for evidence of what testers said, and this section does not provide it; that is a real gap in this submission.
 
-- **Date and time:**
-- **Storyboard commit that was tested:**
-- **How it was shared:**
+Two things also differ from the plan. Both tests were held on the same evening instead of hours apart, so no storyboard change came out of test 1 before test 2. And the version tested was the sample film (v1) and/or *The Comet of Dessie* (v2); the author should note which one each group saw.
 
-| Person (initials) | Relationship to the story | How they listened |
+**Test 1: the radio cut or first cut.** Questions: tell me the story back in one sentence; what did you feel at the end; was there a moment you lost interest or wanted more; did any word sound wrong; is anything missing?
+
+| Person (initials) | Relationship to the story | What they said |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| *not recorded* | | |
 
-**Questions asked**
+**Test 2: the near-final cut.** Questions: what is this film about; what did you feel at the end; is it the same person in every shot; could you read the subtitles and hear every word over the music; would you send it to someone?
 
-1. Tell me the story back in one sentence.
-2. What did you feel at the end?
-3. Was there a moment where you lost interest, or wanted more?
-4. Did any word sound wrong or unnatural?
-5. Is anything missing that belongs in this story?
-
-**What they said** (their words, as close as possible)
-
-| Person | What they said |
-| --- | --- |
-|  |  |
-
-**What we learned**
-
-**What changed because of it**
-
-| Change to the storyboard | Because | Commit |
+| Person (initials) | Relationship to the story | What they said |
 | --- | --- | --- |
-|  |  |  |
+| *not recorded* | | |
 
-## 5. Test 2: the near-final cut
+**What changed because of testing:** nothing in the storyboard, since all responses were positive. The biggest change of the day came from the author, not the testers: replacing the fictional sample with the author's own story (commit `38c2f38`).
 
-*Pending.*
-
-- **Date and time:**
-- **Storyboard commit that was tested:**
-- **Which version was shown:** (vertical or horizontal, on which device)
-
-| Person (initials) | Relationship to the story | In test 1 as well? |
-| --- | --- | --- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-
-**Questions asked**
-
-1. What is this film about?
-2. What did you feel at the end?
-3. Is it the same person in every shot? Where did you doubt it?
-4. Could you read the subtitles comfortably? Could you hear every word over the music?
-5. Would you send this to someone? To whom?
-
-**What they said**
-
-| Person | What they said |
-| --- | --- |
-|  |  |
-
-**What we learned**
-
-**What changed because of it**
-
-| Change | Because | Commit |
-| --- | --- | --- |
-|  |  |  |
+**What we would do differently:** write each answer down in the person's own words at the moment it is given, with their initials and the commit they saw, and leave a few hours between the tests so the first can change the storyboard.
 
 ## 6. What we would test next
 
-*Pending.*
+- Whether viewers who do not speak Amharic follow the story from the subtitles alone, and whether the fog shot (s05) reads as fog on a small phone screen.
+- Whether the punchline in s06 ("GOAL!" shouted Dawit) lands without seeing Dawit on screen.
+- Real motion on s02, s06 and s07 (the GPU job is written), against the same shots as pan and zoom: does motion change what viewers feel, or only how polished it looks?
