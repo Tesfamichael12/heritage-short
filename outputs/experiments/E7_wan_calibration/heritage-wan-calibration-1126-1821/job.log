@@ -1,0 +1,10 @@
+[    0.0s] scratch dir /kaggle/temp with 2698 GB free
+[  799.9s] pip install finished in 800s (exit 1)
+[  799.9s] pip stderr: ort=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/ftfy/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/ftfy/
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/ftfy/
+ERROR: Could not find a version that satisfies the requirement ftfy (from versions: none)
+ERROR: No matching distribution found for ftfy
+
+[  828.8s] environment: {"torch": "2.11.0+cpu", "gpu_count": 0, "gpus": [], "python": "3.13.18", "ram_total_gb": 33.7, "diffusers": "0.42.0"}
+[  828.8s] done: 0 task record(s)

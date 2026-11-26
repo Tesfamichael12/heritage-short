@@ -282,9 +282,31 @@ def worker(gpu, tasks, embeds, inputs, model, scratch, load_lock):
         run_task(pipe, task, gpu, embeds, inputs, load_info)
 
 
+
+def preflight():
+    """Fail in seconds, not after a 14-minute pip timeout, when Kaggle gave the session
+    no network or no GPU (both happen when the account is not phone-verified)."""
+    import shutil
+    import socket
+    ok = True
+    try:
+        socket.getaddrinfo("pypi.org", 443)
+    except OSError as exc:
+        RESULTS["notes"].append("no internet in this session (%s); is the Kaggle account phone-verified?" % exc)
+        ok = False
+    if shutil.which("nvidia-smi") is None:
+        RESULTS["notes"].append("no GPU in this session (nvidia-smi missing); is the Kaggle account phone-verified and is GPU quota left?")
+        ok = False
+    RESULTS["environment"]["preflight_ok"] = ok
+    return ok
+
+
 def main():
     scratch = scratch_dir()
     os.environ["HF_HOME"] = os.path.join(scratch, "hf")
+    if not preflight():
+        save_results()
+        return
     pip_install()
 
     import torch

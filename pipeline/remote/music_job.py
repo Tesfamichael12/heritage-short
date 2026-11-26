@@ -153,11 +153,33 @@ def scratch_dir():
     return best
 
 
+
+def preflight():
+    """Fail in seconds, not after a 14-minute pip timeout, when Kaggle gave the session
+    no network or no GPU (both happen when the account is not phone-verified)."""
+    import shutil
+    import socket
+    ok = True
+    try:
+        socket.getaddrinfo("pypi.org", 443)
+    except OSError as exc:
+        RESULTS["notes"].append("no internet in this session (%s); is the Kaggle account phone-verified?" % exc)
+        ok = False
+    if shutil.which("nvidia-smi") is None:
+        RESULTS["notes"].append("no GPU in this session (nvidia-smi missing); is the Kaggle account phone-verified and is GPU quota left?")
+        ok = False
+    RESULTS["environment"]["preflight_ok"] = ok
+    return ok
+
+
 def main():
     scratch = scratch_dir()
     repo_dir = os.path.join(scratch, "ACE-Step-1.5")
     repo_url = SETTINGS.get("repo", "https://github.com/ACE-Step/ACE-Step-1.5")
 
+    if not preflight():
+        save_results()
+        return
     sh([sys.executable, "-m", "pip", "install", "-q", "-U", "uv"])
     if sh(["git", "clone", "--depth", "1", repo_url, repo_dir]).returncode != 0:
         RESULTS["notes"].append("git clone failed")

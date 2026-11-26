@@ -1,0 +1,17 @@
+[{"stream_name":"stdout","time":1.5092062899999998,"data":"[    0.0s] scratch dir /kaggle/temp with 2698 GB free\n"}
+,{"stream_name":"stdout","time":801.351332103,"data":"[  799.9s] pip install finished in 800s (exit 1)\n"}
+,{"stream_name":"stdout","time":801.351540791,"data":"[  799.9s] pip stderr: ort=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)\")': /simple/ftfy/\n"}
+,{"stream_name":"stdout","time":801.351553306,"data":"WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError(\"HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)\")': /simple/ftfy/\n"}
+,{"stream_name":"stdout","time":801.351560625,"data":"WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError(\"HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)\")': /simple/ftfy/\n"}
+,{"stream_name":"stdout","time":801.351566091,"data":"ERROR: Could not find a version that satisfies the requirement ftfy (from versions: none)\n"}
+,{"stream_name":"stdout","time":801.351571375,"data":"ERROR: No matching distribution found for ftfy\n"}
+,{"stream_name":"stdout","time":801.351576336,"data":"\n"}
+,{"stream_name":"stdout","time":830.266572623,"data":"[  828.8s] environment: {\"torch\": \"2.11.0+cpu\", \"gpu_count\": 0, \"gpus\": [], \"python\": \"3.13.18\", \"ram_total_gb\": 33.7, \"diffusers\": \"0.42.0\"}\n"}
+,{"stream_name":"stdout","time":830.267203211,"data":"[  828.8s] done: 0 task record(s)\n"}
+,{"stream_name":"stderr","time":834.069146559,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":834.069194391,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":834.456091643,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":834.456131199,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":835.411733513,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":836.981626722,"data":"[NbConvertApp] Writing 816301 bytes to __results__.html\n"}
+]

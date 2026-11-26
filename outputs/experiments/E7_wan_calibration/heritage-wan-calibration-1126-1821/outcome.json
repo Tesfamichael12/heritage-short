@@ -1,0 +1,29 @@
+{
+  "ref": "tesfamichaeltafere/heritage-wan-calibration-1126-1821",
+  "status": "complete",
+  "wall_s": 864.0,
+  "files": [
+    "/home/tesfamichaelt/DEV/10x TRP2/week-0/heritage-short/outputs/experiments/E7_wan_calibration/heritage-wan-calibration-1126-1821/heritage-wan-calibration-1126-1821.log",
+    "/home/tesfamichaelt/DEV/10x TRP2/week-0/heritage-short/outputs/experiments/E7_wan_calibration/heritage-wan-calibration-1126-1821/job.log",
+    "/home/tesfamichaelt/DEV/10x TRP2/week-0/heritage-short/outputs/experiments/E7_wan_calibration/heritage-wan-calibration-1126-1821/results.json"
+  ],
+  "results": {
+    "job": "wan-calibration",
+    "started": 1795706479.85504,
+    "tasks": [],
+    "notes": [
+      "pip install failed: 'NameResolutionError(\"HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)\")': /simple/ftfy/\nERROR: Could not find a version that satisfies the requirement ftfy (from versions: none)\nERROR: No matching distribution found for ftfy\n",
+      "no GPU in this session"
+    ],
+    "environment": {
+      "torch": "2.11.0+cpu",
+      "gpu_count": 0,
+      "gpus": [],
+      "python": "3.13.18",
+      "ram_total_gb": 33.7,
+      "diffusers": "0.42.0"
+    },
+    "elapsed_s": 828.8,
+    "finished": 1795707308.620996
+  }
+}

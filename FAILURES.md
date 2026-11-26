@@ -40,3 +40,12 @@ The brief warned this might happen. We checked each provider's official document
 - **Fix:** Rewrote `synthesize` in `pipeline/providers/gemini.py` against Google's speech-generation guide. The next call returned 3.2 s of 24 kHz mono audio in 5.2 s, with 13 input and 81 output tokens logged.
 - **Cost of the failure:** possibly one of the 10 speech requests allowed per day. We do not know whether a rejected request counts, so `make status` counts it.
 - **Lesson:** The installed SDK still accepted the old call without complaint, so its type hints were no guide. Only a real request found the problem. That is what the smoke test is for.
+
+## F5. The first Kaggle job ran with no GPU and no internet
+
+- **When:** 26 November, 18:21 to 18:35, the first video calibration job (E7, `heritage-wan-calibration-1126-1821`).
+- **What broke:** The job reported `complete`, but its environment line read `"torch": "2.11.0+cpu", "gpu_count": 0`, and `pip install` spent 800 seconds failing with `Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)`. No clip was made.
+- **Cause:** The job's `kernel-metadata.json` asked for both (`"enable_gpu": true`, `"enable_internet": true`, `"machine_shape": "NvidiaTeslaT4"`, and `--accelerator NvidiaTeslaT4` on the push). Kaggle silently gives a session neither when the account is not phone-verified, so that is the likely cause; we are checking the account.
+- **What it cost:** 14 minutes of waiting at the worst possible time, and no GPU quota, since no GPU was attached.
+- **Fix:** Both remote jobs now run a preflight before installing anything. It checks that `pypi.org` resolves and that `nvidia-smi` exists, and stops within seconds with a note saying which one is missing.
+- **Lesson:** "Complete" from Kaggle means only that the script ended. The remote job and the local report have to say what the session actually had.
