@@ -62,9 +62,11 @@ def small_jpeg(path: Path, side: int = 1024) -> bytes:
 def build_job(image_path: Path, time_budget_min: int = 100) -> dict:
     import base64
 
+    wanted = [r for r in os.environ.get("CALIBRATE_ROWS", "").split(",") if r]
+    rows = [row for row in MATRIX if not wanted or row["id"] in wanted]
     tasks = [
         {**row, "image": "input.jpg", "prompt": PROMPT, "seed": 42, "guidance": 5.0, "precision": "fp16"}
-        for row in MATRIX
+        for row in rows
     ]
     return {
         "name": "wan-calibration",
@@ -101,7 +103,8 @@ def main(argv: list[str] | None = None) -> int:
 
     slug = f"heritage-wan-calibration-{time.strftime('%m%d-%H%M')}"
     dest = DEST / slug
-    outcome = kaggle.run(slug, "wan_job.py", build_job(image), dest, timeout_s=3 * 3600)
+    budget = int(os.environ.get("CALIBRATE_BUDGET_MIN", "100"))
+    outcome = kaggle.run(slug, "wan_job.py", build_job(image, budget), dest, timeout_s=(budget + 40) * 60)
     shots.log_job(outcome, MODEL)
     (dest / "outcome.json").write_text(json.dumps(outcome, indent=2), encoding="utf-8")
     report(outcome)
