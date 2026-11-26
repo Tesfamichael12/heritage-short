@@ -32,3 +32,8 @@ outputs/final/*.mp4
 # their measurements are kept in each results.json.
 outputs/experiments/E10_ducking/*.wav
 outputs/experiments/E11_loudness_passes/*.wav
+
+# Score candidates not chosen: kept as AAC copies in outputs/experiments/E9_music_candidates/
+# (each WAV is 18 MB and the upload link is slow). The chosen one, cand_7.wav, is committed.
+outputs/music/cand_21.wav
+outputs/music/cand_42.wav

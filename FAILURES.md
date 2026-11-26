@@ -89,3 +89,11 @@ The brief warned this might happen. We checked each provider's official document
 - **Cause:** Not reported by Kaggle. The CLI returns only `queued`. Likely a shortage of free T4 sessions in the evening, or quota on a newly verified account not yet active.
 - **What we did:** Every shot in v1 uses the pan and zoom over its keyframe, which the pipeline was designed to fall back to. For the score, a music job on a Kaggle **CPU** session started at once (`MUSIC_DEVICE=cpu`, job `heritage-music-1126-2009-cpu`).
 - **Lesson:** On a free tier, a GPU is not a resource you can schedule. Planning video as an enhancement on top of a film that already works (the "progressive" design in ARCHITECTURE.md) is what let v1 ship without it.
+
+## F11. The music was made, but the download failed, so the stage reported nothing
+
+- **When:** 26 November, 20:51 to 21:06 EAT.
+- **What broke:** The CPU music job finished on Kaggle with all three candidates (`results.json`: seeds 7, 21 and 42, about 12.5 minutes each, no errors). Our stage then reported `no usable track (push_failed)` for all three. The download over a 30 to 40 kB/s connection broke partway through the first 17 MB file: `Connection broken: IncompleteRead(1539238 bytes read, 3069352 more expected)`, leaving a `.kaggle-partial` file.
+- **Cause, ours:** `kaggle.run` downloads every output file in one call and treats any exception in it as a failed job, so a network error after a successful job was reported as if the job had never run.
+- **What we did:** Downloaded `results.json` alone (`--file-pattern`), which proved the job had worked, then each candidate separately, retrying until no partial file was left.
+- **Fix still to make in code:** download the results file first and each output separately with retries, and report "job succeeded, download failed" as its own status.

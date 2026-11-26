@@ -14,7 +14,7 @@ Each entry is a hypothesis, one change, and a result. The seed stays fixed unles
 | E6 | Keyframe size: 1024 or 1440 pixels? | done |
 | E7 | How fast is Wan 2.2 on a T4, and does half precision work? | not run (no GPU granted) |
 | E8 | Motion-only video prompts, or re-describing the subject? | not run (no GPU granted) |
-| E9 | Three score candidates; short caption or detailed? | not run yet |
+| E9 | Three score candidates; short caption or detailed? | three seeds done; short caption not run |
 | E10 | Ducking: the brief's settings, or tuned? | done |
 | E11 | Loudness: one pass or two? | done, did not match expectation |
 | E12 | Pan and zoom: straight from the still, or enlarged first? | done |
@@ -112,7 +112,18 @@ Each entry is a hypothesis, one change, and a result. The seed stays fixed unles
 - **Change:** three seeds with the storyboard's caption; one more with a short caption.
 - **Measure:** each candidate played quietly under the narration; the choice and the reason are recorded in `music.chosen` and `music.choice_reason`. Loudness range and spectral balance measured for each.
 - **Author's expectation, written beforehand:** see `local/STORY-WORKSHEET.md`, section 8.
-- **Result:** not run yet.
+- **Run:** 26 November, job `heritage-music-1126-2009-cpu` on a Kaggle **CPU** session (no GPU was granted, F10), ACE-Step 1.5 turbo, 8 steps, 95 s, seeds 7, 21 and 42, the storyboard's detailed caption. Each track took about 12.5 minutes on CPU (751, 771 and 760 s); the whole job 41 minutes including install and model download. Three `model_call` lines tagged `E9` in `runs.jsonl`. Listening copies: `outputs/experiments/E9_music_candidates/`.
+- **Result (measured with a meter, not yet judged by ear):**
+
+| Seed | Loudness | Loudness range | Mid band (where speech sits) | Sub-bass |
+| --- | --- | --- | --- | --- |
+| 7 | -16.4 LUFS | 10.8 LU | -17.8 dB | -9.5 dB |
+| 21 | -17.2 LUFS | 11.6 LU | -12.4 dB | -35.7 dB |
+| 42 | -16.8 LUFS | 14.4 LU | -10.1 dB | -11.2 dB |
+
+The three seeds differ a lot from the same caption: seed 42 has almost 8 dB more energy in the speech band than seed 7 and much bigger swells, and seed 21 has almost no low end. So the first seed is not reliably the right one, which supports generating several.
+- **Choice:** seed 7 (`music.chosen = 0`, reason in `music.choice_reason`), because it leaves the most room for the narration. With it the finished film passes every quality check (-14.2 LUFS, -1.0 dBTP).
+- **Not done:** the short-caption comparison (no GPU time), and a listening judgement by the author, which can overrule the meter.
 
 ## E10. Ducking: the brief's settings, or tuned?
 

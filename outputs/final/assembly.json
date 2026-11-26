@@ -27,7 +27,7 @@
   "missing_pictures": [],
   "subtitle_cues": 8,
   "audio": {
-    "music_source": "placeholder",
+    "music_source": "chosen",
     "voice_lines": 8,
     "voice_gain_db": {
       "s01": 4.19,
@@ -39,11 +39,11 @@
       "s07": 0.43,
       "s08": -0.22
     },
-    "music_gain_db": 3.65,
-    "premix_lufs": -16.73,
-    "premix_true_peak_db": 0.21,
+    "music_gain_db": -3.55,
+    "premix_lufs": -16.43,
+    "premix_true_peak_db": 0.22,
     "loudnorm_mode": "dynamic",
-    "loudnorm_output_lufs": -14.32,
+    "loudnorm_output_lufs": -14.25,
     "loudnorm_output_true_peak_db": -2.0,
     "duck": {
       "threshold": 0.02,
@@ -51,8 +51,8 @@
       "attack_ms": 300,
       "release_ms": 1500
     },
-    "reused": true
+    "reused": false
   },
-  "segments_reused": 8,
-  "segments_rendered": 10
+  "segments_reused": 16,
+  "segments_rendered": 2
 }

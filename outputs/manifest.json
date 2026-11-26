@@ -63,6 +63,30 @@
     "shot": "s08",
     "stage": "keyframes"
   },
+  "outputs/music/cand_21.wav": {
+    "bytes": 18240078,
+    "created": "2026-11-26T18:19:03+00:00",
+    "key": "6f8e7db84cea710551eb2491757b23518ea3b43c354c602e0ebd0cdd41709198",
+    "sha256": "a1109d7efc48475aa195768e364ebe3fa037eb288d0f242ba0d325fbeddd73e1",
+    "shot": "cand_21",
+    "stage": "music"
+  },
+  "outputs/music/cand_42.wav": {
+    "bytes": 18243662,
+    "created": "2026-11-26T18:19:03+00:00",
+    "key": "44c1e1950b5a03d5f0a51849b61bd5a68a8bc43ea34fbb324ab6069cb278df09",
+    "sha256": "6f73ed54fdb440b8f2cbe2bcd5a95fbb56d44d5fe40d31acbc23eca962729aff",
+    "shot": "cand_42",
+    "stage": "music"
+  },
+  "outputs/music/cand_7.wav": {
+    "bytes": 18243662,
+    "created": "2026-11-26T18:19:03+00:00",
+    "key": "ba1974bd8343f04517fb3423644b4eab4aa9619265b7bd04a54ef00b8bdfcd62",
+    "sha256": "f4c23607049a04a5684b99081a495fcc4b95fec40aac312885ffda8f865ebd48",
+    "shot": "cand_7",
+    "stage": "music"
+  },
   "outputs/narration/s01.wav": {
     "bytes": 390268,
     "created": "2026-11-26T15:47:23+00:00",

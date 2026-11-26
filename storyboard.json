@@ -57,7 +57,7 @@
       21,
       42
     ],
-    "chosen": null,
+    "chosen": 0,
     "cues": [
       {
         "shot": "s01",
@@ -67,7 +67,8 @@
         "shot": "s07",
         "note": "The flute theme returns, a little fuller, then fades under the end card."
       }
-    ]
+    ],
+    "choice_reason": "Seed 7, chosen by measurement on 26 November at 21:25 EAT, not yet by ear: it has the least energy in the speech band (mid band -17.8 dB, against -12.4 for seed 21 and -10.1 for seed 42), so it masks the narration least, and the smallest loudness range (10.8 LU against 11.6 and 14.4), so it sits steadily under the voice. The author should listen and overrule if another candidate feels better."
   },
   "mix": {
     "voice_lufs": -16,

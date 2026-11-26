@@ -1,9 +1,6 @@
 {
-  "passed": false,
-  "failures": [
-    "score_is_generated_music",
-    "score_was_chosen"
-  ],
+  "passed": true,
+  "failures": [],
   "films": {
     "9x16": {
       "file": "outputs/final/heritage_9x16.mp4",
@@ -34,17 +31,17 @@
           "limit": "aac"
         },
         "integrated_lufs": {
-          "value": -14.3,
+          "value": -14.2,
           "pass": true,
           "limit": "-14 within 1.0"
         },
         "true_peak_db": {
-          "value": -1.8,
+          "value": -1.0,
           "pass": true,
           "limit": "at most -1.0"
         }
       },
-      "bytes": 28485604
+      "bytes": 28558796
     },
     "16x9": {
       "file": "outputs/final/heritage_16x9.mp4",
@@ -75,17 +72,17 @@
           "limit": "aac"
         },
         "integrated_lufs": {
-          "value": -14.3,
+          "value": -14.2,
           "pass": true,
           "limit": "-14 within 1.0"
         },
         "true_peak_db": {
-          "value": -1.8,
+          "value": -1.0,
           "pass": true,
           "limit": "at most -1.0"
         }
       },
-      "bytes": 29810874
+      "bytes": 29977459
     }
   },
   "content": {
@@ -108,12 +105,12 @@
       "limit": "at least 8 (one per spoken line)"
     },
     "score_is_generated_music": {
-      "value": "placeholder",
-      "pass": false
+      "value": "chosen",
+      "pass": true
     },
     "score_was_chosen": {
-      "value": null,
-      "pass": false
+      "value": 0,
+      "pass": true
     },
     "end_card_s": {
       "value": 3.0,
@@ -132,7 +129,7 @@
     "s08"
   ],
   "audio": {
-    "music_source": "placeholder",
+    "music_source": "chosen",
     "voice_lines": 8,
     "voice_gain_db": {
       "s01": 4.19,
@@ -144,11 +141,11 @@
       "s07": 0.43,
       "s08": -0.22
     },
-    "music_gain_db": 3.65,
-    "premix_lufs": -16.73,
-    "premix_true_peak_db": 0.21,
+    "music_gain_db": -3.55,
+    "premix_lufs": -16.43,
+    "premix_true_peak_db": 0.22,
     "loudnorm_mode": "dynamic",
-    "loudnorm_output_lufs": -14.32,
+    "loudnorm_output_lufs": -14.25,
     "loudnorm_output_true_peak_db": -2.0,
     "duck": {
       "threshold": 0.02,
@@ -156,7 +153,7 @@
       "attack_ms": 300,
       "release_ms": 1500
     },
-    "reused": true
+    "reused": false
   },
   "timeline_total_s": 73.0
 }

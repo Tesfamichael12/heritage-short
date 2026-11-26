@@ -8,11 +8,13 @@ The film is 60 to 90 seconds long, in vertical (9:16) and horizontal (16:9), wit
 make film
 ```
 
-> **Status:** the pipeline is built and tested. The film is in production. This section will name the film and link to it when it is released.
+> **Status, 26 November 2026, 21:00 EAT.** Version 1 is a complete 73-second film, *The Meskel Flowers* (የመስቀል አበቦች): eight illustrated shots, Amharic narration, English subtitles, both formats, passing every quality check except the score (see below). **Version 1 is a fictional sample story written with AI**, made to prove the pipeline end to end; it is labelled as fiction in [story/brief.md](story/brief.md), [ETHICS.md](ETHICS.md) and on its end card. The author's real family story replaces it in version 2.
+>
+> What is not there yet, and why: Kaggle never started the GPU jobs tonight ([FAILURES.md](FAILURES.md) F10), so every shot is a slow pan and zoom over its keyframe instead of a generated clip, and the score was being generated on a CPU session instead.
 
 ## Run it
 
-You need [uv](https://docs.astral.sh/uv/), FFmpeg 4.4 or newer, and `make`.
+You need Linux or macOS (on Windows, use WSL: the Makefile uses a Unix shell), [uv](https://docs.astral.sh/uv/), FFmpeg 4.4 or newer, and `make`.
 
 ```
 git clone <this repository>
@@ -22,6 +24,8 @@ make film      # runs every stage and writes outputs/final/heritage_9x16.mp4 and
 ```
 
 **No API keys are needed to reproduce the film.** The generated images, audio and clips are committed in `outputs/` together with a manifest of what each was made from. `make film` finds them unchanged, calls no model, and FFmpeg renders both films again from those files in a few minutes.
+
+**Tested from a clean clone** on 26 November at 20:45 EAT: `git clone` of commit `7c909d8` into an empty folder, no `.env`, no `.cache/`, then `make setup film`. Both films were rendered in 6 min 15 s on a 4-core laptop, every model stage reported its outputs as already made, and the quality check passed on duration, sizes, frame rate, codecs, loudness (-14.3 LUFS) and true peak. It failed only on the score, as the status above explains, which makes `make film` exit with an error until a generated score is chosen.
 
 **To generate from scratch**, or to change the film, copy `.env.example` to `.env` and add your own free keys:
 
