@@ -30,7 +30,7 @@
   "narration": {
     "model": "gemini-3.8-flash-tts",
     "fallback_model": "gemini-3.8-flash-lite-tts",
-    "voice": "Kore",
+    "voice": "Puck",
     "style_instruction": "warm, playful and smiling, like an adult happily remembering childhood, with a little wonder",
     "lead_in_s": 0.4,
     "tail_s": 0.6

@@ -30,20 +30,20 @@
     "music_source": "chosen",
     "voice_lines": 8,
     "voice_gain_db": {
-      "s01": -1.84,
-      "s02": 0.2,
-      "s03": -1.05,
-      "s04": 0.88,
-      "s05": -0.78,
-      "s06": -2.59,
-      "s07": 3.3,
-      "s08": -2.09
+      "s01": 2.38,
+      "s02": 3.24,
+      "s03": -1.07,
+      "s04": 2.37,
+      "s05": 5.1,
+      "s06": 2.0,
+      "s07": 3.51,
+      "s08": 1.52
     },
     "music_gain_db": -3.55,
     "premix_lufs": -16.52,
-    "premix_true_peak_db": -1.47,
+    "premix_true_peak_db": 0.07,
     "loudnorm_mode": "dynamic",
-    "loudnorm_output_lufs": -14.09,
+    "loudnorm_output_lufs": -14.53,
     "loudnorm_output_true_peak_db": -2.0,
     "duck": {
       "threshold": 0.02,
@@ -53,6 +53,6 @@
     },
     "reused": false
   },
-  "segments_reused": 0,
-  "segments_rendered": 18
+  "segments_reused": 10,
+  "segments_rendered": 8
 }

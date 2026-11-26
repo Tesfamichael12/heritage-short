@@ -11,16 +11,16 @@ Style: Default,Noto Sans,54,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,-1,0,0,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.40,0:00:07.56,Default,,0,0,0,,Grandmother said an emperor camped under\NMount Tossa saw a comet, and named the
-Dialogue: 0,0:00:07.56,0:00:09.49,Default,,0,0,0,,place Dessie: my joy.
-Dialogue: 0,0:00:10.40,0:00:18.43,Default,,0,0,0,,At seven, I made a comet of my own:\Nold socks, plastic bags and string.
-Dialogue: 0,0:00:19.40,0:00:26.12,Default,,0,0,0,,Nothing in Dessie is flat. Even our\Nfootball pitch climbed the mountain.
-Dialogue: 0,0:00:27.40,0:00:34.68,Default,,0,0,0,,Our rule: kick it in the ditch, you\Nclimb in after it. Hayat's left foot is
-Dialogue: 0,0:00:34.68,0:00:37.43,Default,,0,0,0,,the reason that rule exists.
-Dialogue: 0,0:00:38.19,0:00:48.40,Default,,0,0,0,,Four–four. Next goal wins. Then the fog\Ncame down from Tossa like a white gabi.
-Dialogue: 0,0:00:49.19,0:00:55.94,Default,,0,0,0,,I couldn't see anything but my comet. I\Nkicked it with all I had. It vanished
-Dialogue: 0,0:00:55.94,0:00:59.13,Default,,0,0,0,,into the fog. “GOAL!” shouted Dawit.
-Dialogue: 0,0:00:59.90,0:01:07.83,Default,,0,0,0,,Grandmother laughed and pulled me under\Nher gabi: “A comet doesn't stay. It only
-Dialogue: 0,0:01:07.83,0:01:10.74,Default,,0,0,0,,shows you where your joy is.”
-Dialogue: 0,0:01:11.53,0:01:17.77,Default,,0,0,0,,Today, when people ask where I'm from, I\Nsay Dessie. And then I tell them what it
-Dialogue: 0,0:01:17.77,0:01:18.24,Default,,0,0,0,,means.
+Dialogue: 0,0:00:00.40,0:00:07.68,Default,,0,0,0,,Grandmother said an emperor camped under\NMount Tossa saw a comet, and named the
+Dialogue: 0,0:00:07.68,0:00:09.64,Default,,0,0,0,,place Dessie: my joy.
+Dialogue: 0,0:00:10.40,0:00:17.50,Default,,0,0,0,,At seven, I made a comet of my own:\Nold socks, plastic bags and string.
+Dialogue: 0,0:00:19.40,0:00:25.79,Default,,0,0,0,,Nothing in Dessie is flat. Even our\Nfootball pitch climbed the mountain.
+Dialogue: 0,0:00:27.40,0:00:34.35,Default,,0,0,0,,Our rule: kick it in the ditch, you\Nclimb in after it. Hayat's left foot is
+Dialogue: 0,0:00:34.35,0:00:36.98,Default,,0,0,0,,the reason that rule exists.
+Dialogue: 0,0:00:37.73,0:00:44.77,Default,,0,0,0,,Four–four. Next goal wins. Then the fog\Ncame down from Tossa like a white gabi.
+Dialogue: 0,0:00:46.73,0:00:56.02,Default,,0,0,0,,I couldn't see anything but my comet. I\Nkicked it with all I had. It vanished
+Dialogue: 0,0:00:56.02,0:01:00.42,Default,,0,0,0,,into the fog. “GOAL!” shouted Dawit.
+Dialogue: 0,0:01:01.19,0:01:08.26,Default,,0,0,0,,Grandmother laughed and pulled me under\Nher gabi: “A comet doesn't stay. It only
+Dialogue: 0,0:01:08.26,0:01:10.86,Default,,0,0,0,,shows you where your joy is.”
+Dialogue: 0,0:01:11.65,0:01:17.06,Default,,0,0,0,,Today, when people ask where I'm from, I\Nsay Dessie. And then I tell them what it
+Dialogue: 0,0:01:17.06,0:01:17.46,Default,,0,0,0,,means.

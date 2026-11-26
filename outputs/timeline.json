@@ -7,7 +7,7 @@
       "duration_s": 10.0,
       "frames": 240,
       "planned_s": 10,
-      "narration_s": 8.84,
+      "narration_s": 8.99,
       "narration_start_s": 0.4,
       "stretched": false
     },
@@ -17,7 +17,7 @@
       "duration_s": 9.0,
       "frames": 216,
       "planned_s": 9,
-      "narration_s": 7.78,
+      "narration_s": 6.85,
       "narration_start_s": 10.4,
       "stretched": false
     },
@@ -27,67 +27,67 @@
       "duration_s": 8.0,
       "frames": 192,
       "planned_s": 8,
-      "narration_s": 6.47,
+      "narration_s": 6.14,
       "narration_start_s": 19.4,
       "stretched": false
     },
     {
       "id": "s04",
       "start_s": 27.0,
-      "duration_s": 10.7917,
-      "frames": 259,
+      "duration_s": 10.3333,
+      "frames": 248,
       "planned_s": 10,
-      "narration_s": 9.78,
+      "narration_s": 9.33,
       "narration_start_s": 27.4,
       "stretched": true
     },
     {
       "id": "s05",
-      "start_s": 37.7917,
-      "duration_s": 11.0,
-      "frames": 264,
+      "start_s": 37.3333,
+      "duration_s": 9.0,
+      "frames": 216,
       "planned_s": 9,
-      "narration_s": 9.96,
-      "narration_start_s": 38.1917,
-      "stretched": true
+      "narration_s": 6.79,
+      "narration_start_s": 37.7333,
+      "stretched": false
     },
     {
       "id": "s06",
-      "start_s": 48.7917,
-      "duration_s": 10.7083,
-      "frames": 257,
+      "start_s": 46.3333,
+      "duration_s": 14.4583,
+      "frames": 347,
       "planned_s": 10,
-      "narration_s": 9.69,
-      "narration_start_s": 49.1917,
+      "narration_s": 13.44,
+      "narration_start_s": 46.7333,
       "stretched": true
     },
     {
       "id": "s07",
-      "start_s": 59.5,
-      "duration_s": 11.625,
-      "frames": 279,
+      "start_s": 60.7917,
+      "duration_s": 10.4583,
+      "frames": 251,
       "planned_s": 9,
-      "narration_s": 10.59,
-      "narration_start_s": 59.9,
+      "narration_s": 9.42,
+      "narration_start_s": 61.1917,
       "stretched": true
     },
     {
       "id": "s08",
-      "start_s": 71.125,
+      "start_s": 71.25,
       "duration_s": 9.0,
       "frames": 216,
       "planned_s": 9,
-      "narration_s": 6.46,
-      "narration_start_s": 71.525,
+      "narration_s": 5.56,
+      "narration_start_s": 71.65,
       "stretched": false
     }
   ],
   "end_card": {
-    "start_s": 80.125,
+    "start_s": 80.25,
     "duration_s": 3.0,
     "frames": 72
   },
-  "total_frames": 1995,
-  "total_s": 83.125,
+  "total_frames": 1998,
+  "total_s": 83.25,
   "missing_narration": []
 }
