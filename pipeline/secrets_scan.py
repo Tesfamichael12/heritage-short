@@ -24,6 +24,11 @@ PATTERNS = {
 }
 
 
+# Values in .env that are public identifiers, not credentials. The Kaggle
+# username is part of every job reference ("user/slug") written to runs.jsonl.
+PUBLIC_IDENTIFIERS = {"KAGGLE_USERNAME"}
+
+
 def _git(*args: str) -> subprocess.CompletedProcess:
     return subprocess.run(["git", *args], cwd=config.ROOT, capture_output=True, text=True)
 
@@ -43,7 +48,7 @@ def scan() -> list[str]:
     local_values = {
         name: value.strip()
         for name, value in dotenv_values(config.ROOT / ".env").items()
-        if value and len(value.strip()) >= 12
+        if value and len(value.strip()) >= 12 and name not in PUBLIC_IDENTIFIERS
     }
 
     for name in candidate_files():
